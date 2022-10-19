@@ -1,0 +1,2537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Eyelid slides
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Eyelid
+## Eyelid anatomy
+<img src="Pasted image 20221006070642.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Gray Line: between lash line and orifices of meibomian gland, corresponding to Muscle of Riolan (most superficial portion of orbicularis muscle)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Eyelid sweat glands
+- Sebaceous glands (holocrine secretion)
+- Meibomian glands in tarsal plate
+- Zeis glands (lash follicles)
+- Sweat glands
+- Apocrine sweat glands (Moll), empty into lash follicles, decapitation secretion, apical snouts
+- Eccrine sweat glands (secretory portion, intradermal duct, intraepithelial duct (sweat pore))
+- Accessory lacrimal gland (look like main lacrimal gland)
+- Ductules thick, acini with myoepithelium
+- Wolfring (Ciaccio) - Superior margin of tarsal plate (2-5 upper, 2 lower)
+- Krause - next to fornix (42 upper, 6-8 lower)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Upper eyelid: longer and rectangular
+- Lower lid: shorter, triangular
+<img src="Pasted image 20221005213026.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005213456.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005213514.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005213659.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005214055.png" alt="" style="width: 1400px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005214220.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Hypergranulosis: Increase in granular layer
+
+<img src="Pasted image 20221008005841.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Dysplasia: disorderly cellular maturation, prominent nucleoli, mitotic figures
+
+<img src="Pasted image 20221008010100.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Anaplasia: frank cytologic malignancy
+
+<img src="Pasted image 20221008010640.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015172236.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Benign
+- Dermal lesions do not interrupt epidermal structures (just looks raised)
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Inflammatory
+- Hordeolum (Stye)
+- Chalazion
+- Demodex folliculorum
+- Pubic lice
+- Fibrous histiocytoma
+- Juvenile xanthogranuloma (JXG)
+- Eosinophilic granuloma (Langerhan cell histiocytoma)
+- Lipoid proteinosis
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Hordeolum (Stye)
+#### Path
+- Usually Staph infection
+- Acute purulent inflammation of any gland (meibomian, Zeiss, Moll, or eccrine) in the eyelid
+- Small purulent abscess with PMN, necrotic cellular debris centered on a hair follicle and its adjacent gland
+- External = lash follicle infection
+- Internal = meibomian gland
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Discrete, warm, erythematous, painful pustule
+- Develops over course of a few days
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Chalazion
+#### Path
+- Clogged meibomian glands
+- Lipid gets into soft tissue, causing irritation
+- Zonal granulomatous inflammation centered on clear spaces (lipid)
+- Mixed inflammatory infiltrate (PMN, plasma cells, lymphocytes, epithelioid histiocytes and multinucleate giant cells)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20220605182648.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- De novo
+- May arise from Hordeolum (Stye)
+- Associated with Rosacea and Blepharitis
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Hard painless eyelid nodule
+- Slowly enlarges over weeks to months
+
+<img src="Pasted image 20220605182553.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221005214727.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Rule out sebaceous gland carcinoma (mimic chalazions clinically)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Hot compress
+- Lid hygiene
+- Topical/oral abx
+- Surgical excision
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Tend to reoccur (then need to rule out sebaceous gland carcinoma)
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Demodex folliculorum
+#### RFX
+- Seborrheic blepharitis
+- Common, may be in ears
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221005214809.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005214827.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Hair follicle with multiple organisms
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Pubic lice
+#### Path
+- Somewhat of an STI
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221005214918.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005215014.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Juvenile xanthogranuloma (JXG)
+#### Path
+- Skin disease, rarely affecting eyes
+- Most common cause of spontaneous hyphema in childhood (iris and anterior segment)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Rare association of JXG with NF1 and Juvenile myelomonocytic leukemia
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20220927202003.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+Buphthalmos = enlarged eyeball
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Biopsy with touton giant cells
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Eosinophilic granuloma (Langerhan cell histiocytoma)
+#### Path
+- Localized variant of Langerhan's histiocytosis
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Usually involves superior lateral orbit
+- Bone destruction
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Histiocytes with nuclear folds
+- S-100 positive
+- EM: Birbeck granules or racket bodies
+
+<img src="Pasted image 20221011214925.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Lipoid proteinosis
+#### Path
+- Urbach-Wiethe dz
+- 1q21 extracellular matrix protein gene 1
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- AR dz
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Multiple waxy nodules along lid margins (moniliform blepharosis)
+- Hoarseness from laryngeal involvement
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Intracranial calcification
+- Deposits of hyaline material in dermis, submucosa
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Cysts
+- Epidermal inclusion cyst
+- Eccrine hydrocystoma
+- Apocrine (moll gland) hydrocystoma
+- Eyelid dermoid, Solid epibulbar dermoid
+- Syringcystadenoma papilliferum
+- Hidradenoma papilliferum
+- Pleomorphic adenoma of eyelid
+- Mucinous sweat gland adenocarcinoma
+- Eccrine sweat gland adenocarcinoma
+- Adenoma and apocrine adenocarcinoma of gland of Moll
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Epidermal inclusion cyst
+#### Path
+- Dermal implantation cyst of epidermis (follicular, infundibular type)
+- Occlusion of the orifice of the hair follicle (may open to outside)
+- Milia are multiple, small epidermal inclusion cysts (histologically identical and vary only in size)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Congenital or acquired (site of prior trauma)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Slow-growing
+- Elevated, round, smooth, white lesion (epidermis overlying a dermal lesion)
+- Has central pore (remaining pilar duct)
+- Has a yellowish color, penlight shows keratin settling by gravity
+
+<img src="Pasted image 20220605184136.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Lesions do not transilluminate
+- Infundibular types filled with keratin, unilocular
+
+<img src="Pasted image 20221005215133.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005215142.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+- Pathology: cystic structure within dermis lined by stratified squamous keratinizing epithelium with desquamated keratin in cyst lumen. No dermal appendages (otherwise would be a dermoid cyst)
+
+<img src="Pasted image 20220605184153.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Excision
+- Marsupialization
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Can be secondarily infected or rupture and incite inflammatory reaction
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Eccrine hydrocystoma
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Propensity to develop near canthi
+- Translucent
+- Filled with watery fluid
+
+<img src="Pasted image 20221005215246.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- May be multilocular
+- Dual layer of ductal epithelium
+- Serous fluid
+
+<img src="Pasted image 20221015172831.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Apocrine (moll gland) hydrocystoma
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Appear dark (filled with brown fluid)
+
+<img src="Pasted image 20221005215412.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Need to look at it closely unless it's blue
+- Apical snouts forming apocrine epithelium
+- Multilocular
+
+<img src="Pasted image 20221006071509.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Eyelid dermoid
+#### Path
+- Also see Solid epibulbar dermoid (ass'n with Goldenhar syndrome)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Lining epithelium has epidermal appendages
+- Hair shafts, sebaceous and sweat glands
+- Nasal dermoids may have conjunctival epithelial linings
+
+<img src="Pasted image 20221014225921.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Solid epibulbar dermoid
+#### Path
+- Associated with Goldenhar's syndrome
+- Epibulbar dermoids,
+- Preauricular appendages,
+- Aural fistulas
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20220928211832.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Hair follicle lesions
+- Pilomatrixoma
+- Trichoepithelioma (Brooke's tumor)
+- Trichofolliculoma
+- Trichilemmoma
+- Cowden syndrome
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Pilomatrixoma
+#### Path
+- Calcifying Epithelioma of Malherbe
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Reddish mass at upper lid or eyebrow region
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Basophilic hair matrix cells and necrotic shadow cells
+- Calcification in necrotic areas with shadow cells
+- Foreign body giant cells
+
+<img src="Pasted image 20221006074649.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221006074656.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015181800.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015181814.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Trichoepithelioma (Brooke's tumor)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- May be inherited as AD dz
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Multiple tumors
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Multiple horny cysts with fully keratinized center surrounded b islands of proliferating basaloid cells
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Trichofolliculoma
+#### Path
+- Most differentiated pilar tumor
+- Hamartoma
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Slightly elevated umbilicated nodule
+- Characteristic small white hairs in pore
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Central dilated hair follicle filled with keratin surrounded by branching immature hair follicles
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Trichilemmoma
+#### Path
+- Benign, arises from glycogen-rich clear cells of outer hair sheath
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Solitary papule papules or nodules with irregular rough surface
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Lobular acanthosis, PAS+, diastase-sensitive clear cells
+- Central hyalinization, usually several hair follicles
+- Peripheral palisading, distinct basement membrane
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Cowden syndrome
+#### Path
+- AD dz, PTEN gene mutation -> overactive MTOR pathway
+- Multiple hamartomas, especially facial Trichilemmoma
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Breast cancer (most common presentation)
+- Endometrial cancer (screen start at 40)
+- Follicular thyroid carcinoma
+- Verrucous lesions (usually symmetrically, like HPV)
+- Cafe au lait spots
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Marker for breast or thyroid cancer
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Screen at early age (18 y/o or 5 years before first diagnosis in family member)
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Xanthelasma
+- Xanthelasma
+- Infantile (Capillary) hemangiomas
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Xanthelasma
+#### Path
+- Tumor of intracellular lipid accumulation
+- Lipid-laden macrophages within dermis
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- More common with increasing age
+- May be associated with lipid metabolism disorders
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Multiple soft, yellowish plaques
+- Found near medial canthi
+
+<img src="Pasted image 20220605183419.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Pathology shows collection of histiocytes with foamy, lipid-laden cytoplasm, cluster around blood vessels
+
+<img src="Pasted image 20220605183449.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015172348.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Surgical excision
+- CO2 laser
+- Topical 100% trichloroacetic acid
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- High recurrence rate
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Infantile (Capillary) hemangiomas
+#### Path
+- Share antigens with placental microvessels
+- Might result from embolization of placental vascular cells to fetal tissues
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Grows rapidly
+- Tend to undergo involution
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Marker: GLUT-1
+- Nonencapsulated, early lesions composed of sheets of endothelial cells
+- Later lesions lose cellularity
+
+<img src="Pasted image 20221005215656.png" alt="" style="width: 1100px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221014225340.png" alt="" style="width: 1400px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Lumen might not be apparent initially
+
+<img src="Pasted image 20221006075331.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Observation if not vision threatening
+- Steroids, cryo, sclerosing solutions, interferon alfa 2a
+- Beta blocker if vision threatening
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Associated with amblyopia
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Vascular lesions
+- Infantile (Capillary) hemangiomas
+- Cavernous hemangioma
+- Lymphangioma
+- Glomus tumor
+- Cutaneous angiosarcoma
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Infantile (Capillary) hemangiomas
+#### Path
+- Share antigens with placental microvessels
+- Might result from embolization of placental vascular cells to fetal tissues
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Grows rapidly
+- Tend to undergo involution
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Marker: GLUT-1
+- Nonencapsulated, early lesions composed of sheets of endothelial cells
+- Later lesions lose cellularity
+
+<img src="Pasted image 20221005215656.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221014225340.png" alt="" style="width: 1400px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Lumen might not be apparent initially
+
+<img src="Pasted image 20221006075331.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Observation if not vision threatening
+- Steroids, cryo, sclerosing solutions, interferon alfa 2a
+- Beta blocker if vision threatening
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Associated with amblyopia
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Cavernous hemangioma
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Large blood-filled spaces lined with epithelium and fibrous septa
+
+<img src="Pasted image 20221014002813.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221014002849.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Lymphangioma
+#### Path
+- Anastomosing lymphatics lined by single layer of endothelium
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Many present at birth, slowly progressive
+- Poorly circumscribed, infiltrative
+- Do not involute
+- Hemorrhage into lesion common → chocolate cyst
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Lymphocytic foci
+
+<img src="Pasted image 20221014230428.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Papillomas, skin tags, acrochordons
+
+<img src="Pasted image 20221005215909.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005215920.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005220134.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Seborrheic keratosis
+- Actinic keratosis of the eye
+- Inverted follicular keratosis
+- Hereditary benign intraepithelial dyskeratosis (HBID)
+- Sebaceous hyperplasia
+- Sebaceous adenoma
+- Syringoma
+- Acrochordon
+- Squamous papilloma
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Seborrheic keratosis
+#### Path
+- Acquired benign papilloma
+- Intraepidermal proliferation of benign basal cells
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Increase in size and number with age
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Variable
+- Sharply defined, brownish, rough, warty surface
+- "Greasy" "Stuck-on" appearance
+- Variable degrees of pigmentation and hyperkeratosis
+- Sessile, pedunculated, lobulated, papillary, or verrucoid
+
+<img src="Pasted image 20220605191130.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005220332.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221005220405.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+- Pathology: acanthosis, hyperkeratosis, papillomatosis
+- Low magnification accentuates "stuck on" appearance of papillomatous growth with upward acanthosis
+
+<img src="Pasted image 20220605191147.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- High magnification shows proliferation of cells within epidermis, closely resembling normal basal cells
+- May proliferate down into dermis in reticulated pattern
+- May be pseudohorn cysts (crevices or infoldings of epidermis cut in cross section that appear to be cystic accumulations of keratinous material)
+
+<img src="Pasted image 20220605191334.png" alt="" style="width: 800px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005214055.png" alt="" style="width: 1400px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221006071926.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221006072003.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Shave excision at epidermal-dermal junction
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Sudden onset multiple seborrheic keratoses appears as Leser-Trelat sign (systemic malignancy, classically gastrointestinal adenocarcinoma)
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Actinic keratosis of the eye
+#### Path
+- Precancerous dysplastic squamous lesion from proliferation of atypical epidermal keratinocytes
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Fair skin
+- UV light exposure
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Erythematous, scaly macules or papules
+- <1 cm in diameter, rough surface
+- Often on face, exposed scalp, and dorsum of forearms and hands
+- Several clinical variants:
+- Classic/common, hypertrophic, atrophic, AK with cutaneous horn, and pigmented
+
+<img src="Pasted image 20220605205321.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20220605205350.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+- Pathology varies depending on variant
+- Classically: focal surface parakeratosis/hyperkeratosis and loss of stratum granulosum
+- May have dyskeratosis
+- May be acanthosis with club-like extensions of rete ridges into dermis
+- May have some epidermal nuclear atypia, usually deeper
+- Superficial dermis may have lymphocytic infiltrate at base of lesion (inflammation)
+- Underlying dermis usually has solar/actinic elastosis (grayish dermis)
+- Dysplasia spares pilosebaceous units
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005213924.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20220605205440.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Cryotherapy
+- Topical imiquimod or 5-fluorouracil
+- Surgical excision
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Potential to transform into Squamous cell carcinoma (SCC) of the eye (10-25% of patients eventually develop an SCC) while 25% resolve spontaneously... total risk of transformation for individual lesion estimated at 1%
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Inverted follicular keratosis
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Acantholysis
+- Squamous eddies
+
+<img src="Pasted image 20221015172013.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Hereditary benign intraepithelial dyskeratosis (HBID)
+#### Path
+- Witkop-von Sallmann Syndrome
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Bilateral squamous lesions
+
+<img src="Pasted image 20220929194110.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20220929194333.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20220929194434.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20220929194526.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Sebaceous hyperplasia
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Older patients
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221006073535.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- May look like molluscum or keratoacanthoma
+- Yellow, well demarcated, central pore
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Central duct and umbilicated, often misdiagnosed as BCC
+
+<img src="Pasted image 20221006073634.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Sebaceous adenoma
+#### Path
+- MSH2 DNA mismatch repair gene
+- MLH1
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221006073846.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Muir-Torre syndrome (subset of Lynch syndrome is a rare AD dz predisposing to Keratoacanthoma of the eye, Basal cell carcinoma (BCC) of the eye, Sebaceous gland carcinoma of the eye, and internal malignancies)
+
+<img src="Pasted image 20221006073804.png" alt="" style="width: 1100px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- More proliferative cells than hyperplasia
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Syringoma
+#### Path
+- Benign adenomatous tumor of eccrine sweat gland
+- Likely arises from malformed eccrine ducts
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Young female patients
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Multiple soft, small (1-2 mm), mildly hypopigmented papules
+- On or near lid margin or in dermis (commonly lower lid)
+
+<img src="Pasted image 20220605185303.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+- Pathology: epithelial strands of small basophilic cells extending into dermis, representing proliferation of eccrine sweat gland structures
+- "Comma-shaped" or "tadpole" appearance
+- Multiple small, round, cystic ductules of proliferating eccrine glands lined by double layer of epithelial cells with colloidal secretory material in lumen
+
+<img src="Pasted image 20220605185343.png" alt="" style="width: 1100px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221006074546.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015181656.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Laser ablation
+- Surgical excision
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Acrochordon
+#### Path
+- Benign, acquired papilloma (skin tag, fibroepithelial polyp, or squamous papilloma)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- More common in middle-aged and elderly patients
+- Areas of skin friction
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Single or multiple
+- Range in size 1 mm to 1 cm
+- Classically polypoid, soft, attached by a stalk
+- Non- or -slightly pigmented, but stalk can be twisted, infarcted, and turn tan-black
+
+<img src="Pasted image 20220605193111.png" alt="" style="width: 1100px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221005220309.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+- Pedunculated, squared fronds, basaloid (blue), like basket weaving
+- Pathology: polypoid lesions with fibrovascular stalk containing loose, collagenous stroma surrounded by a mostly unremarkable epithelium
+- Varying degrees of acanthosis and hyperkeratosis
+
+<img src="Pasted image 20220605193144.png" alt="" style="width: 600px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Excisional biopsy
+- Shave biopsy
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Squamous papilloma
+#### Path
+- Keratinized epidermal fronds with fibrovascular cores
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221013001058.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Pigmented lesions
+- Ephelides
+- Lentigo simplex
+- Actinic lentigo
+- Lentigo senilis
+- Nevi
+- Junctional nevus
+- Compound nevus
+- Intradermal nevus
+- Other types of nevi:
+- Balloon cell nevi
+- Spitz nevus (spindle or epithelioid cell nevus, juvenile melanoma)
+- Congenital intradermal nevi (large >2cm nevi are melanoma precursors 4-6%)
+- Blue nevi and cellular blue nevi (dermal melanocytes)
+- Nevus of Ota (oculodermal melanocytosis)
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Ephelides
+#### Path
+- Hyperpigmentation in basal cells
+- Melanocytes not increased
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Lentigo simplex
+#### Path
+- Evolving junctional nevus
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Increased number of basal melanocytes
+- Elongated rete ridges
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Actinic lentigo
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Liver spots
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221006074746.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Lentigo senilis
+#### Path
+- Evolves into adenoid seborrheic keratosis
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- 90% of elderly whites
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Junctional nevus
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Flat
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Nests of nevus cells at epidermal-dermal junction
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Thought to have malignant potential
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Compound nevus
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Usually slightly elevated or papillomatous, pigmented
+- Nevoid nests at junction and in dermis, junctional component gives malignant potential
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Intradermal nevus
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Most common type of nevus
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Papillomatous, dome shaped or pedunculated
+- Many are slightly pigmented or amelanotic
+- Hair shafts indicate intradermal variety
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221015181557.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221006074858.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221013205850.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- No junctional component
+- Nevus cells separated from epidermis by collagenous Grenz Zone, and may infiltrate orbicularis muscle
+- Nevus polarity:
+- Type A: Nevus cells in upper dermis larger
+- Type B: in mid dermis are smaller, lymphoid
+- Type C in lower dermis fibroblastic, spindle shaped, little or no melanin
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Low propensity for malignant transformation
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Umbilicated lesions
+- Seborrheic keratosis
+- Molluscum contagiosum
+- Basal cell carcinoma
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Neoplasms
+- Squamous cell carcinoma (SCC) of the eye
+- Keratoacanthoma of the eye
+- Molluscum contagiosum of the eye
+- Basal cell carcinoma (BCC) of the eye
+- Merkel cell carcinoma of the eye
+- Sebaceous gland carcinoma of the eye
+- Melanoma of the eye
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Squamous cell carcinoma (SCC) of the eye
+#### Path
+- Second most common cutaneous malignancy (first is Basal cell carcinoma (BCC) of the eye) - 5-10% of eyelid malignancies
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Most common cutaneous cancer in dark skin individuals
+- Fair skin
+- UV exposure, Childhood sunburns
+- Age
+- Family/personal history, genetic predisposition
+- Immunosuppression
+- Smoking, arsenic exposure
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Variable
+- Papules, plaques, nodules with smooth, hyperkeratotic, or ulcerative
+- Most are erythematous to pink nodules
+- Overlying scale or crust ± ulceration
+- Predilection for lower eyelid and lid margin
+- For lesions of upper lid and outer canthus, SCC > BCC
+
+<img src="Pasted image 20220605210158.png" alt="" style="width: 700px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20220605210230.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221006072450.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+- Pathology: vary from well differentiated to poorly differentiated
+- Atypical squamous cells form islands and strands extending deep into epidermal basement membrane, infiltrating into dermis, inciting fibrotic dermal reaction
+- Prominent desmosomes between cells
+- Dyskeratosis often present in horn cysts or keratin pearls
+- Cells typically eosinophilic and may form whorls (squamous eddies, in contrast to BCC)
+
+<img src="Pasted image 20221015173509.png" alt="" style="width: 800px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20220605210337.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20220605210310.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221006072600.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20220605210448.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Surgical excision with frozen section margin control ± LN bx
+- Topical imiquimod, 5-fluorouracil, EGFR inhibitors
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Spread perineurally or invade orbit/paranasal sinuses (<5% metastasis overall but 20-30% if on lips, ears, or eyelids) or to regional lymph node
+- Rarely metastasizes
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Keratoacanthoma of the eye
+#### Path
+- Spectrum of squamous cell carcinomas
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Rare tumor
+- Older, most commonly in 6th decade
+- Fair-skinned individuals
+- Chronic sun exposure
+- Sites of prior trauma
+- Immunocompromised
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Flesh colored to erythematous nodule with central keratin plug
+- Grow quickly (up to 2.5 cm over 2-4 weeks)
+- Followed by slower involutional phase (several months)
+- May have keratin filled crater and if left alone, may leave a permanent, depressed scar
+
+<img src="Pasted image 20220605194322.png" alt="" style="width: 800px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221006072803.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Need complete excision of entire skin (otherwise looks like SCC)
+
+<img src="Pasted image 20221005220515.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015172700.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Overhanging buttress of epidermis, pushing margin at base
+- No invasion of structures (otherwise would be SCC)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+- Pathology: lymphocytic infiltrate at the base of the lesion and eosinophilic epithelium
+- Epidermis is acanthotic, showing some nuclear atypia, dyskeratosis, squamous eddies, and increased mitotic rate
+- "Shoulder" formation - sharp transition between normal and thickened epithelium
+
+<img src="Pasted image 20220605194511.png" alt="" style="width: 800px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Complete surgical excision
+- Cryotherapy
+- Topical or intralesional 5-fluorouracil
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Cutaneous horns erupting indicates higher likelihood of underlying Squamous cell carcinoma (SCC) of the eye
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Molluscum contagiosum of the eye
+#### Path
+- Epidermal viral infection
+- Caused by DNA poxvirus Molluscum Contagiosum virus
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- More common in pediatrics
+- Immunocompromised → multiple molluscum contagiosum
+
+<img src="Pasted image 20221005221243.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Multiple, small (1-3 mm), discrete, dome-shaped or nodular, waxy papules
+- Umbilicated centers
+- May also present with a **chronic follicular conjunctivitis** (caused by molluscum bodies shed into tear film from eyelid lesions)
+
+<img src="Pasted image 20220605192442.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005220859.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221005220925.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005221056.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Henderson-Patterson corpuscles
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+- Pathology: nodular proliferation of epithelium producing a central focus of necrotic cells extruding to the surface
+- Infected cells have large, homogeneous, intracytoplasmic inclusion bodies (molluscum bodies) representing replicating pox virus in cytoplasm and displace the cell nucleus peripherally
+- Infected cells are smaller and more eosinophilic in the deeper layers of the lesion. Become larger and more basophilic as they extend toward surface
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Excision
+- Cryotherapy
+
+
+- Curettage
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Basal cell carcinoma (BCC) of the eye
+#### Path
+- Thought to arise from plurpotent germ cells of epidermal basal cell layer
+- Dysregulated or aberrant Hedgehog signaling
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Most common eyelid malignancy (70-90%)
+- Fair-skinned, elderly patients (peak ~70 y/o)
+- UV light exposure
+- Chronic inflammation
+- Immunosuppression
+- Exposure to arsenic and coal tar derivatives
+- Gorlin-Goltz Syndrome (Nevoid BCC syndrome)
+- AD dz, multiple BCCs in young pts (10-30y/o), odontogenic jaw cysts, skeletal anomalies, palmar/plantar pits, neurologic anomalies, endocrine disorders, 0.7% of pts with BCC
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Flesh colored to pearly, raised nodule with rolled edges
+- Some ulcerate or have telangiectatic vessels of the surface
+- Location from most common to least common:
+- Lower eyelid > medial canthus > upper eyelid > lateral canthus
+- Seen where there are dermal appendages
+- Variants: nodular (>50%), pigmented, superficial, cystic, morpheaform
+- Plaque appearing with indistinct margins → more likely morpheaform
+
+<img src="Pasted image 20220605195212.png" alt="" style="width: 800px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20220605195232.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+- Pathology: arises from epidermis and invades into dermis forming basophilic islands (palisading "picket fence" border mimics hair matrix). "Blue and below"
+- Basaloid cells, retraction artifact, stromal desmoplasia
+- Morpheaform variant: slender infiltrating tendrils of tumor cells with indistinct margins (poorly differentiated)
+- Tumor cells relatively bland, monomorphous nuclei with high nuclear to cytoplasmic ratio
+- Single cell necrosis is common within islands (islands separated by artifactitious clear space)
+
+<img src="Pasted image 20221005222748.png" alt="" style="width: 800px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005222808.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20220605195307.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20220605195349.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005222849.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005222856.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Morpheaform BCC
+- Basaloid cells in background of fibrosis → may be very difficult to treat
+- Slender tendrils, indistinct margin, invasive and aggressive
+
+<img src="Pasted image 20221006073302.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221006073345.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- May metastasize
+- Adenoid type may have some mucin material, less characteristic peripheral palisading and retraction artifact
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- MOHS micrographic excision
+- Surgical excision with frozen section margin controls
+- Topical imiquimod or 5-fluorouracil
+- Adjunct systemic chemotherapy/targeted therapy (vismodegib or sonidegib - *smoothened* inhibitors) but very expensive and tends to recur once stopped
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Can be locally or extensively invasive, but grows slowly and very low rate of metastasis
+- Medical canthus ones can invade orbit and sinuses (most difficult to manage and carry a high risk of recurrence)
+
+<img src="Pasted image 20221005222915.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Merkel cell carcinoma of the eye
+#### Path
+- Arise from Merkel cells (mechanoreceptors) responsible for tactile sensation, in the basal epidermis
+- Human tumor virus: MXPyV integrated into tumor cell DNA found in 80% (found pretty commonly in conjunctiva)
+- May originate from immature totipotent skin cells of the skin
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Rare but aggressive
+- Older individuals
+- Significant UV light exposure
+- Fair skin
+- Immunosuppression (may also have underlying multiple myeloma, CLL, or melanoma)
+- Merkel cell polyomavirus infection
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Pink to blue-red, rapidly growing, painless, firm, shiny nodule
+- Intact overlying skin
+- Upper eyelid, head, or neck
+- Up to 30% have regional lymph node involvement at initial presentation
+
+<img src="Pasted image 20220605212808.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221006074331.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- "Blue and below" like basal cell carcinoma, appear like basophilic rings
+
+<img src="Pasted image 20221005224138.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221006074353.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Stains with low molecular weight cytokeratin and neuron specific enolase (neuroendocrine tumor)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+- Pathology: deeply basophilic uniform cells with high nucleus:cytoplasmic ratio, finely dispersed nuclear chromatin, inconspicuous nucleolus
+- Cells crowded and often mold together
+- Single-cell necrosis, numerous mitotic figures, and lymphovascular, perineural, or epidermal invasion
+- Features of epithelial and neuroendocrine cells (markers for IHC such as synaptophysin, chromogranin, and neurofilament)
+
+<img src="Pasted image 20220605212830.png" alt="" style="width: 800px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20220605212901.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Wide surgical excision/Mohs micrographic surgery ± LN bx
+- Systemic chemotherapy if LN involvement
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Often misdiagnosed as cyst, lipoma, or other benign lesion
+- Local recurrence and lymph node metastases are common
+- 5-year survival is poor at 38%
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Sebaceous gland carcinoma of the eye
+#### Path
+- Slow-growing, potentially aggressive
+- Can arise from meibomian glands, glands of Zeis, or caruncular sebaceous glands
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Uncommon (rare before 40)
+- Elderly
+- F>M
+- More common in Asians (most common lid tumor in India)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- 80% present on head or neck, 40% involve eyelid (more commonly upper eyelid unlike BCC and SCC because more numerous meibomian glands)
+- Small, rubbery, firm nodule on upper eyelid (more meibomian glands)
+- Yellowish appearance (sebum)
+- May be papillomatous or have diffuse tarsal thickening with eyelid misdirection
+- May have masdarosis (loss of eyelashes)
+- Caruncular lesions may be multi-lobulated, grey-yellow subconjunctival masses
+- Notorously masquerade as other conditions: Chalazion, Ulcerative blepharocaonjunctivitis
+
+<img src="Pasted image 20221006073957.png" alt="" style="width: 700px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005224837.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+-
+Cells with foamy vacuolated cytoplasm
+- Tumor lobules and central necrosis (comedocarcinoma)
+- Pagetoid invasion of overlying skin/conjunctiva (clusters of tumor cells in epidermis without apparent connection to main tumor)
+- Total replacement of conjunctival epithelium
+-
+Reserve wet tissues for fat stains (Oil red O) - though often not needed for ophthalmologic pathologists, otherwise can also use adipophilin on paraphin embedded tissue
+
+<img src="Pasted image 20220605212133.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221006074041.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005224913.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015181307.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005225136.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015181233.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005225212.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005224927.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221006074113.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005224948.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Propensity for intraepithelial spread (replacemet of conj)
+- IHC for mismatch repair gene, lipophilin
+- Acantholysis occurs and epithelium may be lost
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+- Biopsy and pathology
+- - Frequently misdiagnosed
+- → Submit recurrent or atypical chalazia to pathology
+- → Biopsy unilateral chronic keratoconjunctivitis
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Wide surgical excision with permanent margin controls, map biopsies
+- Adjunctive topical mitomycin C for non-invasive conjunctival involvement
+- Radiation for larger tumors as adjunct to surgery
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Mortality ~15% esp if: upper lid, size > 10mm, Meibomian origin, sx > 6mo, infiltrative growth pattern, poor sebaceous differentiation, pagetoid invasion, lymphatic, vascular and orbital invasion
+- Direct extension
+- Node and distant mets (lung, liver, brain, skull)
+- If arising from glands of Zeis, the lesions form small yellow nodules in front of the grey line (can cause eyelid malposition)
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Melanoma of the eye
+#### Path
+- Lentigo maligna melanoma (vertical growth phase) - fascicles of spindle-shaped cells
+- 10% metastasize, 5-year-survival is 90%
+- Superficial spreading melanoma (Pagetoid melanoma)
+- Younger patients, non-exposed skin, faintly palpable macule with irregular outlines, variable pigment. Pagetoid nests in all levels of epidermis. Invasion: varicolored, white areas of spontaneous regression. 5-year-survival 69%
+- Nodular melanoma: Age 40-50, 2:1 M>F, always palpable, rapid growth, 5-year-survival 44%
+- Acral lentiginous melanoma
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Fair skin
+- UV exposure, childhood sunburns
+- Many dysplastic nevi
+- Rare, 1% of eyelid malignancies
+- Family history or personal history of melanoma
+- Familial atypical mole melanoma (FAM-M) syndrome or Dysplastic nevus syndrome, B-K mole syndrome)
+- AD dz, multiple large atypical nevi in childhood → high risk cutaneous melanoma and intraocular tumors have been reported
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Irregularly pigmented, patchy, slowly expanding macule
+- Pigmented, but half of eyelid melanomas are non-pigmented
+- Lentigo maligna (in situ, on face or neck of older pts) is most common subtype of eyelids (lentigo maligna melanoma once it invades)
+- Can spread to conjunctiva or conjunctival melanoma can secondarily affect skin
+
+<img src="Pasted image 20220605211104.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221006074953.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221006075030.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Do not do shave biopsy (need tumor thickness)
+
+<img src="Pasted image 20221006075100.png" alt="" style="width: 1100px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221006075119.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+- Pathology: can have several different cell types (epitheliod, spindle, and balloon cells) that can be subtle, especially if lacking pigment
+- Two forms of atypia: architectural atypia described as nests of atypical, pleomorphic melanocytes proliferating without pattern or symmetry
+- Cytologic atypia: high nuclear:cytoplasmic ratio, prominent nucleoli, increased mitotic rate
+- Breslow depth is most important prognostic factor
+
+<img src="Pasted image 20220605211127.png" alt="" style="width: 900px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20220605211150.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- HMB45 and Melan A, MART-1, Ki-67
+- Clark classification
+- Level 1: epidermis only, BM intact - 100% LLM (5-yr-surv)
+- Level 2: early invasion into papillary dermis - 100% LMM (5-yr-surv)
+- Level 3: fills entire papillary dermis - 80% SSM (5-yr-surv)
+- Level 4: reaches reticular dermis - 65% NM (5-yr-surv)
+- Level 5: invades subcutaneous tissues - 15% NM (5-yr-surv)
+- Tumor thickness (Breslow)
+- <0.76mm = 100% 5-yr-surv
+- >1.5mm = <50% 5-yr-surv
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Mohs micrographic surgery, controversial
+- Surgical excision with permanent margin control is more common
+- ±LND based on biopsy result
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Viral infections
+- Verruca vulgaris
+- Herpes simplex virus
+- Varicella Zoster Virus (VZV)
+- Kaposi sarcoma
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Verruca vulgaris
+#### Path
+- Papillomatous growth (wart)
+- Caused by epidermal infection of HPV (usually 6 or 11)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Any periocular skin, often near eyelid margin
+- Small, non-pigmented papule with digitated surface (spiky)
+- OR elongated, filiform lesion with papillomatous growth
+
+<img src="Pasted image 20220605191925.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221005221402.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Viral inclusions and keratohyaline granules transiently
+
+<img src="Pasted image 20221005221527.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+- Pathology: Massive papillomatosis with acanthosis
+- Large degree of hyperkeratosis and lesions demonstrate parakeratosis (classically apical)
+- Higher magnification: infected cells demonstrate koilocytosis (cytoplasmic clearing with nuclear contraction)
+- Vacuolated keratinocytes have condensation and clumping of dark-staining keratohyaline granules in periphery of cell and occasionally show intranuclear eosinophilic viral inclusion bodies
+- Typically have mixed inflammatory infiltrate in the underlying superficial dermis
+
+<img src="Pasted image 20220605191951.png" alt="" style="width: 400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20220605192029.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221006072102.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Excision
+- Cryotherapy
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Often have recurrences
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Herpes simplex virus
+HSV encephalitis
+Genital herpes
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221005221614.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005221713.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Varicella Zoster Virus (VZV)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Herpes zoster ophthalmicus
+
+<img src="Pasted image 20221005221759.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Uveitis
+##### Post-exposure prophylaxis
+- Neonate to mom with active varicella
+- **VZIG** (Varicella zoster immunoglobulin)
+- *Cannot give varicella zoster vaccine* (live attenuated doesn't work at <1y/o)
+- Other individuals where VZV vaccine is contraindicated (CD4 <200, pregnant)
+- **VZIG**
+- Healthy individuals
+- **VZV vaccine**
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Kaposi sarcoma
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Scant proliferation
+- HHV-8
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Fungal infections
+- Blastomycosis
+- Coccidiomycosis
+- Cryptococcosis
+- Sporotrichosis
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Parasitic infestations
+- Phthiriasis palpebrarum
+- Demodicosis
+- Myiasis
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Phthiriasis palpebrarum
+#### Path
+- STI, pubic lice
+- 30% have another STI
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Lice droppings can cause follicular conjunctivitis
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Demodicosis
+#### Path
+- Mites live in hair follicle
+- Feed secluded follicle during the day
+- Prowl on skin surface at night
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Extremely common
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Chronic blepharitis
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Myiasis
+#### Path
+- Fly larvae (Dermatobia hominis)
+- Others: Subcutaneous dirofilariasis (zoonose, D. tenuis from raccoon in USA)
+- Leishmaniasis
+- Cysticercosis - larval form of T. solium
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Intraocular involvement is rare
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Congenital and developmental lesions
+- Cryptophthalmos
+- Microblepharon
+- Coloboma
+- Ankyloblepharon
+- Ankyloblepharon filiforme adnatum
+- Blepharophimosis
+- Epicanthus
+- Euryblepharon
+- Epiblepharon
+- Distichiasis
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Cryptophthalmos
+#### Path
+- May be part of Fraser syndrome
+- Poorly formed eyes
+- Developmental problem of eyelids
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20220928140608.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20220928140636.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Distichiasis
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Accessory row of lashes arises from meibomian glands
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Aging changes
+- Dermatochalasis
+- Senile entropion
+- Senile ectropion
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Eyelid in systemic disease
+- Sarcoidosis
+- Primary systemic amyloidosis
+- Lepromatous leprosy
+- Mycosis fungoides
+- Lymphomatoid papulosis
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Sarcoidosis
+#### Path
+- Granulomatous disorder that affects the eye most often (38% vs. skin 23%)
+- Discrete noncaseating granulomas
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+African American, young
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- **Nonproductive cough**
+- *Lymphadenopathy*
+- **Malar Rash** (lupus pernio), *erythema nodosum* (violaceous indurated nodules on shins), *papular sarcoidosis* (papules on face)
+- **Hypercalcemia**
+
+<img src="Pasted image 20220927204347.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Slightly elevated and umbilicated papules (may be partially depigmented in blacks,)
+- Uveitis
+- Retinal perivascular candle wax drippings
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221011221105.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20220927204127.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+Dacryoadenitis
+
+<img src="Pasted image 20220927204425.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20220927204519.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Primary systemic amyloidosis
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Multiple confluent yellow or waxy papules
+- Hemorrhage (purpura) spontaneously or with minor trauma
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Lepromatous leprosy
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Ocular involvement most common in lepromatous leprosy
+- Madarosis (loss of brows and lashes) starts laterally
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Mycosis fungoides
+#### Path
+- Cutaneous T-cell lymphoma
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Lutzner cells, Pautrier abscesses
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Lymphomatoid papulosis
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- CD30 positive
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Miscellaneous and rare eyelid lesions
+- Phakomatous choristoma (Zimmerman's tumor)
+- Pseudoheumatoid nodule (granuloma annulare)
+- Nodular fasciitis
+- Juvenile fibromatosis
+- Granular cell tumor (myoblastoma)
+- Eyelid metastases
+- Erdheim-Chester disease
+- Necrobiotic xanthogranuloma
+- Carney's complex
+- Intravascular papillary endothelial hyperplasia
+- Silica granuloma of the eyelid
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Phakomatous choristoma (Zimmerman's tumor)
+#### Path
+- Choristoma of lenticular anlage composed of cells resembling lens epithelium surrounded by thick PAS (+) lens capsule-like BM
+- Expresses lens proteins
+- From faulty separation of lens vesicle from surface ectoderm
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Lower medial eyelid or anterior orbital tumor of infants
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20220928142959.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+-
+<img src="Pasted image 20220928143014.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- - Linear bands of cuboidal cells resembling anterior capsular epithelium, and bladder cells of PSC cataract, PAS positive basement membrane
+
+<img src="Pasted image 20220928143123.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Pseudoheumatoid nodule (granuloma annulare)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- 1st decade
+- Lateral canthus and lateral upper lid
+- No associated systemic disease
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Zonal granuloma surrounding central necrobiotic collagen
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Nodular fasciitis
+#### Path
+- Benign reactive proliferation of myofibroblasts
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Juvenile fibromatosis
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Pediatric tumor
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Affects eyelids, orbit
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+- Distinguish from fibrosarcoma
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Granular cell tumor (myoblastoma)
+#### Path
+- Modified schwann cells
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Benign lid margin nodule
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Cells with abundant acidophilic granular cytoplasm
+- PAS (+) granules
+- Basement membrane
+- S-100 (+)?
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Eyelid metastases
+#### Path
+- Common primaries: breast, lung, cutaneous malignant melanoma
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- May mimic atypical chalazion clinically
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Breast metastases may have histiocytoid histology
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Erdheim-Chester disease
+#### Path
+- Fatal systemic disorder with bone lesions
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- BRAFV600E mutation
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Atypical indurated xanthelasma-like lesions with marked **fibrosis**
+- **Bilateral** orbital involvement
+- Retroperitoneal fibrosis (**kidney failure**)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Touton giant cells with admixed chronic nongranulomatous inflammation
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### Path
+- Marker for plasma cell dyscrasia
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Atypical xanthelasmas
+
+<img src="Pasted image 20220927202234.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Zonal granuloma with necrobiotic center
+
+<img src="Pasted image 20220927202325.png" alt="" style="width: 1400px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Protein electrophoresis
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Carney's complex
+#### Path
+- Myxomas
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- AD dz
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Myxomas: skin, breast, heart (cardiac myxomas are multiple, ventricular, early onset)
+- Spotty mucocutaneous pigmentation
+- Pigmented spots on face, conjunctiva, and plica semilunaris
+- Endocrine abnormalities
+- Rare testicular tumors in males (large cell calcifying sertoli tumors)
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Intravascular papillary endothelial hyperplasia
+#### Path
+- Most are within distended vein
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+- Confusion with angiosarcoma
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Silica granuloma of the eyelid
+#### Path
+- Foreign body granuloma, may mimic sarcoidosis
+</div></script></section><section  data-markdown><script type="text/template"></script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+
+	if(isLight(bgColor)){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+		  RevealMenu,
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		customcontrols: {
+			controls: [
+				{id: 'toggle-overview',
+				title: 'Toggle overview (O)',
+				icon: '<i class="fa fa-th"></i>',
+				action: 'Reveal.toggleOverview();'
+				},
+			]
+		},
+		menu: {
+			loadIcons: false
+		}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":1920,"height":1200,"margin":0,"controls":true,"progress":true,"slideNumber":false,"transition":"slide","transitionSpeed":"default"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+
+  <!-- created with Advanced Slides -->
+</html>

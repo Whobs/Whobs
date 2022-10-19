@@ -1,0 +1,1789 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Intraocular tumors slides
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Pigmented fundus lesions
+- Uveal malignant melanoma
+- Ciliary body melanoma
+- Iris melanoma
+- Choroidal nevus
+- Melanocytoma (magnocellular nevi)
+- Congenital hypertrophy of RPE (CHRPE)
+- Congenital grouped pigmentation
+- RPE adenoma
+- RPE adenocarcinoma
+- Combined hamartoma of RPE and retina
+- RPE hyperplasia
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Uveal malignant melanoma
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### Path
+- Congenital melanocytosis (Nevus of Ota)
+- BAP1 syndrome
+- Low risk malignant transformation (higher in neurofibromatosis patients)
+- transformation = enlargement in basal dimension or thickness by ≥0.5 mm
+- UV light
+- Chemical carcinogens
+- Mutations
+- No BRAF mutations
+- GNAQ/GNA11 mutations in 50% of uveal melanoma
+- Early event (also in bluenevi and congenital ocular melanocytosis)
+- BAP1 important for metastasis (Breast CA 1 early onset associated protein 1 gene)
+- 84% of class II melanomas
+- Located on chr 3, inactivating mutations are thought to be disclosed by loss of chr 3
+- BAP1 syndrome: uveal melanoma, mesothelioma, MBAITS (unusual skin tumors)
+- PRAME - late class I metastasis
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Most common intraocular tumor in US and Europe (2/3 of uveal melanoma arise in Caucasians of European descent despite comprising just 13% of world's population)
+- 1800 new cases yearly (6/million)
+- Blue-eyed, European ancestry
+- Whites 8.5x > AA
+- Rare in Asia, Latin Americans (where retinoblastoma is probably more common)
+- Tumors in pigmented patients tend to be larger, more pigmented, and necrotic
+- Same survival as tumors in whites
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Most common at choroid
+- Posterior uveal melanoma
+- Ciliary body melanoma
+- Can have orange pigment (detached RPE cells or macrophages that digested lipofuscin or melanin)
+- Extrascleral expansion → anterior or orbit mass with proptosis
+- Glaucoma
+- Iris heterochromia
+- Inflammatory signs mimicking endophthalmitis or orbital cellulitis
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221003210618.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- To: Thickness >2mm
+- Find: subretinal Fluid
+- Small: Symptoms
+- Ocular: Orange pigment
+- Melanoma: Margin <3 mm from disc
+- Using Helpful: Ultrasound Hollow
+- Hints: Halo absent
+- Daily: Drusen absent
+Now: multimodal imaging (US/AF/OCT)
+- TFSOM-DIM (To find small ocular melanoma doing IMaging)
+- Thickness >2mm (US), subretinal fluid (OCT), Sx (VA ≤20/50), orange pigment (AF), Melanoma hollow (US), DIaMeter >5mm)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003211227.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Pathologic classification by size (LTD):
+- Small: LTD < 10mm, discoid, confined to choroid
+- Medium: LTD 11-15 mm, break through Bruch's, mushroom or collar button, dilated vessels
+- Large: LTD >15 mm, invades and destroys ocular tissues, common extrascleral extension
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+AJCC based on basal diameter and thickness
+
+<img src="Pasted image 20221003211549.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Metastasis usually already occurred before tumors are diagnosed and treated
+- Goal for ophthalmologist is just local control
+- No effective treatment for metastatic uveal melanoma
+- Observation for growth
+- Enucleation (if large)
+- Plaque brachyradiotherapy
+- Particle beam radiation (proton beam, helium ions)
+- Transpupillary thermotherapy (form of photocoagulation)
+- Local resection
+- Cryotherapy
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Overall 50% mortality
+- Metastasize hematogenously to liver (90% of patients)
+- Prognostic indicators:
+- Extraocular extension
+
+<img src="Pasted image 20221003211645.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003211650.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Size
+- Ciliary body involvement (delayed diagnosis vs. intrinsic biologic factors)
+- Histopathologic exam:
+- Cell type (Callender classification)
+
+<img src="Pasted image 20221003211843.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Bland spindle cells ←→ markedly anaplastic cells
+
+<img src="Pasted image 20221003212125.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003212146.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Spindle: 25% 15-year mortality. Mixed 59% 15-year mortality. Epithelioid 72%
+
+<img src="Pasted image 20221003212320.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Spindle A: syncytium with indistinct cytoplasmic margins, longitudinal chromatin stripe (fold in nuclear membrane)
+- Spindle B: Syncytium with indistinct cytoplasmic margins but plumper oval nuclei and distinct nucleoli
+- Epithelioid cells: distinct cytoplasmic margins, poorly cohesive, round or oval nuclei, large reddish-purple nucleoli, peripheral margination of chromatin
+- Mixed cell type (one collaborative study found that 89% were mixed cell)
+
+<img src="Pasted image 20221003212543.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Necrotic melanoma
+
+<img src="Pasted image 20221003212618.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Mitotic activity
+- Vasculogenic mimicry patterns (loops, networks)
+- Loops and networks associated with poor prognosis
+- Lymphocytic infiltration
+- In uveal melanoma, this is poor prognosis because tumor cells got out of eye to stimulate immune system
+- Melanophagic infiltration
+Additional prognostic factors requiring special testing: nonrandom chromosomal abnormalities, gene expression profiles (two classes with different patterns)
+GEP is expensive, and still no good treatment → Patient may want to know or clinical trials exclude class I that could distort results
+- Class 1A with GEP like melanocytes, 1B with late mets (PRAME mutation)
+- Class 2: high risk mets (90%), GEP resembles primitive neural/ectoderm stem cells, epithelioid, vascular mimicry patterns, monosomy 3
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003213107.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Monosome 3 in tumor cells (50% die within 3 years)
+- Gains in chr 8
+- Loss of HLA-1 expression associated with better survival
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Ciliary body melanoma
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Usually diagnosed late (hidden by iris), no RD
+- Can cause unilateral cataract
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221003210521.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### Path
+- Most iris tumors are melanocytic
+- Freckles (small nonprogressive nevi)
+- Nevi (spindle cell nevi)
+- Melanocytoma (magnocellular nevus)
+- Malignant melanoma
+- Discrete nodular
+- Diffuse
+- Tapioca
+- Most are low grade spindle tumors, but with exceptions
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Mean age ~10 years younger than patients with posterior segment melanomas
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Most commonly occur on inferior sun-exposed part of iris
+- Can be patient whose iris becomes darker and develops glaucoma in that eye
+
+<img src="Pasted image 20221003214231.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+Misdiagnosis is common (many dx glaucoma), had surgery for glaucoma, liver mets in 13%
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221003214019.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003214030.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Mixed cell melanoma
+
+<img src="Pasted image 20221003214043.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Bland flat portion (C - spindle cells nevus), pedunculated portion contained epitheliod cells
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Relatively favorable prognosis (4-10% mortality) - but may be inclusion of nevi in series
+- Prognosis may be similar to posterior segment tumor in similar size and cell type
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Choroidal nevus
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221003214630.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Drusen on surface → suggest nevus
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+- Suspicious nevus if: larger, overlying drusen, even serous detachment
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Photos and observation
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Malignant transformation rare
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Melanocytoma (magnocellular nevi)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221003214720.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003214755.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Behaved aggressively, caused pain
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221003214816.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003214826.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Bland cells with abundant maximally pigmented cytoplasm
+- Bleaching discloses bland nuclei, benign nuclear/cytoplasmic ratio
+
+<img src="Pasted image 20221003214842.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015230012.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Very low incidence of malignant transformation
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Congenital hypertrophy of RPE (CHRPE)
+#### Path
+- Low grade neoplasm of RPE
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221003215004.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221015231610.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Large, tall RPE cells with large round granules of melanin and macromelanosomes
+
+<img src="Pasted image 20221015231635.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Often develop areas of de-pigmentation called lacunae (chorioretinal adhesion to denuded Bruch's membrane)
+
+<img src="Pasted image 20221003215203.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003215237.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003215317.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+- Not pigmented fundus lesion of Gardner syndrome (FAP) - which tend to be multiple, irregular, and partially depigmented
+
+<img src="Pasted image 20221003215536.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- May enlarge, and can rarely cause carcinoma
+
+<img src="Pasted image 20221003215336.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003215418.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- On the inner surface of Bruch's membrane (not involving stroma of choroid)
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Congenital grouped pigmentation
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221003215643.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Increased density of melanin, some areas may be full thickness
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# RPE adenoma
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Can appear like a melanocytoma
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221003214914.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003220418.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+Microcystic adenoma, rests on inner surface of Bruch's membrane
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Combined hamartoma of RPE and retina
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Younger pts
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221003223302.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Usually near optic disc, but can be at periphery
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221003223311.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Strands of RPE cells → pigmentation
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Choroidal hemangioma
+#### Path
+- Benign cavernous hemangioma (no metastasis)
+- Overlying cystoid retinal edema
+- Exudative retinal detachment
+- Treat to save the eye and prevent these complications
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Sporadic
+- Discrete localized orange tumor
+- Sturge-Weber Snydrome
+- Diffuse, "tomato ketchup" fundus
+-
+<img src="Pasted image 20221003221026.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221015231948.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015232005.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Uveal metastases
+#### Path
+- Most common intraocular malignancy (autopsy)
+- Most not seen by ophthalmologists
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- 37% from primary breast carcinoma (usually have history of prior treatment)
+- 26% lung cancer, men, occult primary
+- 1/3 have no history of cancer
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Multiple, nummular, amelanotic
+- 80% are between macula and equator (blood supply)
+- Exudative retinal detachment- shifting fluids
+
+<img src="Pasted image 20221003221456.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003221530.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Choroid diffusely thickened
+
+<img src="Pasted image 20221015231822.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Nests, cord, and islands of tumor in uveal stroma
+
+<img src="Pasted image 20221015231901.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003221610.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221017201820.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Immunohistochemical stains can help dx primary
+
+<img src="Pasted image 20221003221741.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- CK7, AE1/AE3 - cytokeratin
+- BRST-1 → breast carcinoma
+- Estrogen receptor
+- KI-67: proliferation marker
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Other primary intraocular tumors
+- Peripheral nerve sheath tumors
+- Mesectodermal leiomyoma
+- Tumors of ciliary epithelium (NPCE & PCE)
+- Tumor rests on inner surface of ciliary body, not involving stroma (Uveal melanomas involve stroma)
+
+<img src="Pasted image 20221003222524.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Adenoma of nonpigmented ciliary epithelium
+- Adenoma of RPE
+- Adenocarcinoma of RPE (low grade)
+- Pleomorphic carcinoma of NPCE
+- Choroidal osteoma
+- Astrocytoma
+- Embryonal medulloepithelioma
+- Fuchs adenoma
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Peripheral nerve sheath tumors
+#### Path
+- Schwannoma
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Very rare
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Indistinguishable from melanoma
+
+<img src="Pasted image 20221003222110.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Stain S-100 positive, need additional neuromarkers
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Mesectodermal leiomyoma
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Young women
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Amelanotic tumors usually in supraciliary space
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221003222150.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Adenoma of nonpigmented ciliary epithelium
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Tumor on inner surface of ciliary body, internal to plane of ciliary epithelium
+- Usually doesn't involve ciliary body stroma
+- Ciliary epithelial bands rest on connective tissue septa
+- May contain pools of hyaluronic acid
+
+<img src="Pasted image 20221015230311.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Pools of hyaluronidase-sensitive acid mucopolysaccharide often present
+
+<img src="Pasted image 20221003222557.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Bands and strands of epithelial cells on PAS-positive septa
+
+<img src="Pasted image 20221015230453.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Adenoma of RPE
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Tumor rests on inner surface of Bruch's membrane
+- Abrupt margins
+- Many are heavily pigmented
+- Bands and islands of bland pigmented epithelial cells (may contain vacuoles)
+
+<img src="Pasted image 20221015230908.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015230926.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Adenocarcinoma of RPE (low grade)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Tumor rests on inner surface of Bruch's membrane
+- Abrupt margins, erodes through retina
+- Many tumors heavily pigmented, with lipid exudation
+- Bands and cords of cells on fibrous septa
+- Nuclear atypia, mitoses, infiltration and invasion (cytologic criteria for malignancy)
+
+<img src="Pasted image 20221015231256.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015231310.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015231331.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- These do not metastasize
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Pleomorphic carcinoma of NPCE
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Rare, potentially fatal (extraocular extension)
+- Found in chronically blind pthisical eyes
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221003222729.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003222833.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Choroidal osteoma
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Young women
+
+ (67%)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Bone within stroma or choroid
+- 20% bilateral
+- Yellow-orange, scalloped margins, can decalcify and involute
+- CNV
+- Plaque of bone in choroid
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- CT/US
+
+<img src="Pasted image 20221003223049.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Astrocytoma
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Tuberous sclerosis
+- Family history
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Seizure disorder
+- Usually nonprogressive
+- But can be progressive in giant cell astrocytoma (Tuberous sclerosis )
+
+<img src="Pasted image 20221003235620.png" alt="" style="width: 1200px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221003235637.png" alt="" style="width: 1200px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+
+<img src="Pasted image 20221003235722.png" alt="" style="width: 1200px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Embryonal medulloepithelioma
+#### Path
+- May be associated with pleuropulmonary blastoma
+- Mutation in DICER1 gene
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Rare ciliary body tumor, but second most common primary pediatric IOT
+- Age 4-5 y/o
+- Rarely adults
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Neoplastic cyclitic membrane
+- Benign and malignant variants
+- Teratoid (38%) and nonteratoid
+- Cartilage
+- Muscle
+- Rhabdomyoblasts
+- Brain-like tissue
+- Cysts
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221003235226.png" alt="" style="width: 1200px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- "Diktyoma" for net-like tumor
+- Teratoid tumor with foci of hyaline cartilage
+
+<img src="Pasted image 20221003235430.png" alt="" style="width: 1200px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015233808.png" alt="" style="width: 1200px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015233851.png" alt="" style="width: 1200px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003235440.png" alt="" style="width: 1200px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Areas that contain undifferentiated retinoblastoma-like areas, sarcomatous stroma, rosettes
+
+<img src="Pasted image 20221015233920.png" alt="" style="width: 1200px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003235450.png" alt="" style="width: 1200px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Fatalities with extraocular extension
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Fuchs adenoma
+#### Path
+- Benign adenoma
+- Derived from nonpigmented ciliary epithelium (single ciliary process)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221003222319.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221003222229.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Retinoblastoma and mimics
+
+<img src="Pasted image 20221017204456.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Retinoblastoma
+- Physiologic leukocoria
+- Retinocytoma
+- Ocular toxocariasis
+- Persistent fetal vascularity (PFV) or Persistent hyperplastic primary vitreous (PHPV)
+- Coats disease
+- Retinopathy of prematurity (ROP)
+- Norrie's disease
+- Incontinentia Pigmenti
+- Embryonal medulloepithelioma
+- Astrocytoma
+- Retinal detachment (RD)
+- Vitreous hemorrhage
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Retinoblastoma
+#### Path
+- Malignant tumor of retina in children
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Most common intraocular tumor in children (1/15k-20k)
+- Some cases may have genetic link, increasing tumor risk for both eyes (germline mutation)
+- 5-10% familial (2/3 of patients will have b/l RB)
+- Chr 13Q- deletion (<5%) - where Rb gene is (pradigmatic recessive oncogene → E2F tf activated)
+- Sporadic (somatic) 64% - develop avg 2 y/o
+- Sporadic (germinal) 21% - develop avg 1 y/o (suggested if b/l )
+- 2% have unilateral tumors and negative family hx of RB (RB1+/+ retinoblastomas)
+- Poorly differentiated, behave aggressively, always unilateral and sporadic
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Mean age 18 months, most by age 4
+- Leukocoria (90%)
+- Strabismus (35%)
+- Decrease in vision or eye inflammation (or pseudoinflammation)
+- Ophthalmic exam: poor red light reflex in affected eye
+
+<img src="Pasted image 20220526230113.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003223734.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003223751.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003223417.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003224011.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- inner retinal layers seed vitreous (vs. exophytic → RD, lens displacement)
+
+<img src="Pasted image 20221003224054.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Rare presentations: pseudohypopyon, orbital cellulitis, neovascular glaucoma, heterochromia iridis (rare), orbital tumor with massive extraocular extension, congenital retinoblastoma (very rare)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Mutation of RBI gene
+- U/S and CT/MRI detect size and extent of tumor, IVFA
+- Calcified mass with normal globe size
+- Encephaloid appearance
+
+<img src="Pasted image 20221003224730.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003224754.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003224854.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003224913.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003224950.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003225001.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Vs. Flexner-Wintersteiner with lumen corresponding to subretinal space, and "XLM" - filled with hyaluronidase-resistannt MPS similar to inter-photoreceptor matrix material. Also seen in Embryonal medulloepithelioma and Pineal tumors
+
+<img src="Pasted image 20221003225117.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003225752.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015232317.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Least common presentation: diffuse infiltrative retinoblastoma (1.4%), late presentation at 6 years, pseudoinflammatory signs (pseudohypopyon), always unilateral (sporadic, somatic), tumor in zonule
+
+<img src="Pasted image 20221003224301.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003224434.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003224440.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- often have severe NVG → infarction → inflammatory signs
+- RB1+/+ RB: undifferentiated cells with large, prominent round or oval nuclei with multiple nucleoli. Apoptosis, little calcification, no F-W
+rosettes - many have MYCN mutation
+
+<img src="Pasted image 20221003233337.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+DDx: Physiologic leukocoria
+- Retinocytoma
+- DNA analysis of aqueous humor can serve as surrogate tumor biopsy
+Other ddx:
+- *Ocular toxocariasis*
+- *Persistent fetal vascularity (PFV) or Persistent hyperplastic primary vitreous (PHPV)*
+- *Coats disease*
+- Retinopathy of prematurity (ROP)
+- Retinal dysplasia
+- Norrie's disease
+- Incontinentia Pigmenti
+- Embryonal medulloepithelioma
+- Astrocytoma
+- Retinal detachment (RD)
+- Vitreous hemorrhage
+- Cataracts
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Enucleation/exenteration for large tumors with no vision potential
+- Radiation for bilateral tumors or those near optic nerve
+- Cryotherapy or laser photocoagulation for smaller tumors
+- Chemotherapy for mets or vision salvage (now used as initial management)
+
+<img src="Pasted image 20221003231656.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Good prognosis if no mets or optic nerve invasion (8% vs. 44-64%)
+- Worse prognosis if delayed diagnosis
+- Prior intraocular surgery
+- Use of external beam radiotherapy (secondary tumors) especially those with germline mutations
+- Risk vision loss if tumor is adjacent to cornea
+- **Osteosarcoma** later in life (20-50% develop in 20 years), 500x increase risk outside field of radiation
+- Pineoblastoma (with osteosarcoma is "trilateral retinoblastoma")
+- Metastasis → direct infiltration to brain via optic nerve, (orbit, cranium)
+- Dispersion of tumor cells through subarachnoid space to brain and spinal cord
+- Hematogenous dissemination to lungs, bone, and brain (this is uncommon unlike uveal melanoma)
+- Lymphatic spread (after invasion of conj). May be pre-auricular and cervical LAD
+- Metastases typically within 2 years of treatment if they do occur
+- Recurrence due to retained tumor cells in orbit or beyond point of optic nerve transection
+- Massive uveal invasion: 3mm or more maximum diameter (width or thickness)
+- Risk factors for metastasis
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003231619.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003231851.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Physiologic leukocoria
+#### Path
+- Optic nerve causes white reflex
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221003223902.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Retinocytoma
+#### Path
+- Benign tumor with photoreceptor differentiation
+- RB gene mutation
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221003230212.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Composed entirely of fleurettes
+
+<img src="Pasted image 20221003230614.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+Spontaneous regression can occur in phthisical eye (orbital cellulitis)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+
+<img src="Pasted image 20221003230422.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Risk malignant transformation
+
+<img src="Pasted image 20221003230311.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Ocular toxocariasis
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Age 6-11
+- Contact with puppies
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Unilateral
+- Subfoveal granuloma
+- Peripheral abscess
+- Diffuse endophthalmitis
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Eosinophilic abscess
+- Serial sections to find worm
+- ELISA test excludes if negative
+
+<img src="Pasted image 20221003233850.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015233701.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015233716.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Persistent fetal vascularity (PFV) or Persistent hyperplastic primary vitreous (PHPV)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Congenital (present at birth)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Eye usually microphthalmic
+- Iris shunt vessels
+- Lens may contain fat or bone
+-
+<img src="Pasted image 20221015233005.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003234554.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Fibrovascular plaque of connective tissue adheres to posterior lens
+- Ciliary processes drawn centrally
+- Persistent hyaloid vessel present
+
+<img src="Pasted image 20221003234216.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015233033.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Coats disease
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- 2/3 are in boys 5-10 years old
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221003234629.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003234711.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- RD
+- Secondary angle closure
+- Lipid in subretinal fluid
+- Abnormal vessels
+
+<img src="Pasted image 20221003234807.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003234748.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003234933.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Large leaky telangiectatic retinal vessels → Leber miliary aneurysm
+- Massive focal thickening of outer retina by exudates
+- Bullous exudative retinal detachment
+- Lipid-rich subretinal fluid
+
+<img src="Pasted image 20221015232437.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015232453.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015232507.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Retinopathy of prematurity (ROP)
+#### Path
+- Vitreoretinal NV occurs at posterior margin of avascular retina
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Infants (premature)
+- Supplemental O2 use for lung hypoplasia
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Bilateral
+- Peripheral mass of folded retina → retrolental fibroplasia
+- Temporal dragging of fovea, optic disk
+
+<img src="Pasted image 20221003235124.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003235131.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Norrie's disease
+#### Path
+- chr Xp11 norrin
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Deaf and blind, mental retardation
+- Bilateral retrolential mass or malformed detached retina (pseudogliomas)
+
+<img src="Pasted image 20221003235755.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Incontinentia Pigmenti
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221003235836.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003235844.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221003235918.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Embryonal medulloepithelioma
+#### Path
+- May be associated with pleuropulmonary blastoma
+- Mutation in DICER1 gene
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Rare ciliary body tumor, but second most common primary pediatric IOT
+- Age 4-5 y/o
+- Rarely adults
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Neoplastic cyclitic membrane
+- Benign and malignant variants
+- Teratoid (38%) and nonteratoid
+- Cartilage
+- Muscle
+- Rhabdomyoblasts
+- Brain-like tissue
+- Cysts
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221003235226.png" alt="" style="width: 1200px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- "Diktyoma" for net-like tumor
+- Teratoid tumor with foci of hyaline cartilage
+
+<img src="Pasted image 20221003235430.png" alt="" style="width: 1200px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015233808.png" alt="" style="width: 1200px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015233851.png" alt="" style="width: 1200px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003235440.png" alt="" style="width: 1200px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Areas that contain undifferentiated retinoblastoma-like areas, sarcomatous stroma, rosettes
+
+<img src="Pasted image 20221015233920.png" alt="" style="width: 1200px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003235450.png" alt="" style="width: 1200px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Fatalities with extraocular extension
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Astrocytoma
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Tuberous sclerosis
+- Family history
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Seizure disorder
+- Usually nonprogressive
+- But can be progressive in giant cell astrocytoma (Tuberous sclerosis )
+
+<img src="Pasted image 20221003235620.png" alt="" style="width: 1200px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221003235637.png" alt="" style="width: 1200px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+
+<img src="Pasted image 20221003235722.png" alt="" style="width: 1200px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Retinal detachment (RD)
+#### Path
+- Abnormal separation of sensory from the underlying RPE and choroid plexus
+- The photoreceptor loses its blood supply (outer third of retina depends on choroid)
+- Macular retina is especially susceptible to this damage
+- Rhegmatogenous (tear allows for fluid to collect in sub-retinal space), traction (vitreous pulling on neovascular membranes), or exudative (hemorrhage or exudative deposit from tumors or inflammation under retina)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- 1 in every 10,000 people
+- M=F
+- Higher in Jewish descent, lower in black populations
+- Myopic eyes (larger = thin peripheral retina, more likely to break and form small holes)
+- After eye surgery (i.e. cataract extraction)
+- Trauma (boxing, football, bungee-jumping)
+- Posterior vitreous detachment (PVD)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Annoying floaters (shadow of floating objects in the vitreous fluid)
+- Flashes of light (photopsias, photoreceptors mechanically stimulated)
+- Dark curtain can obscure peripheral vision
+- Indirect ophthalmoscopy:
+- large tear can be obvious with floating retina, blood vessels and undulates with eye movement
+- Shafer's sign (suspended pigment particles floating in anterior vitreous pathognomonic for retinal tear)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Ultrasound of the eye (especially when tear is not obvious or retina can't be visualized because of hemorrhage or cataracts)
+
+<img src="Pasted image 20220806151221.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20220806151251.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Rapid treatment for mac on RD
+- Can be delayed for mac off RD (vision is already compromised), wait until team and ophthalmologist are optically ready
+- Laser retinopexy
+- Scleral buckling (anterior breaks at the equator)
+- Pneumatic retinopexy (bubble of gas or silicon oil into globe to tamponade retina) but patient must keep head down for several weeks to keep bubble in place or return to OR to remove oil
+- Vitrectomy if severe and complicated detachment
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+#### Pathology:
+- Eyes fixed in formaldehyde have artifactual detachment
+- True detachment:
+- Atrophy of photoreceptors
+- Subretinal fluid
+- False detachment:
+- Photoreceptors persist
+- Melanin attached at tips of photoreceptors
+
+<img src="Pasted image 20221003194758.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Vitreous hemorrhage
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Trauma
+- Retinal tears
+- PVD
+- Diabetic retinopathy
+- SIckle cell
+- Eales
+- Disciform degeneration of the macula
+- Tumors
+- Terson's syndrome (subarachnoid hemorrhage)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Cholesterol bulbi
+- Hemosiderosis - iron deposits in epithelial structures
+- Hemolytic glaucoma, Ghost cell glaucoma
+- Tractional retinal detachment
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Vitreous seeds
+- (1) Dusts: scattered single cells alternating with macrophages
+- (2) Spheres: Solid or centrally necrotic balls of viable cells shed single cells, may be more clinically aggressive
+
+<img src="Pasted image 20221003230925.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- (3) Cloud: composed primarily of necrotic material, not responding to therapy
+
+<img src="Pasted image 20221003230942.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003231000.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Intravitreal chemotherapy can be an effective therapy for vitreous seeds, a major cause of treatment failure (without predisposing to extraocular extension)
+</div></script></section></section><section  data-markdown><script type="text/template"></script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+
+	if(isLight(bgColor)){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+		  RevealMenu,
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		customcontrols: {
+			controls: [
+				{id: 'toggle-overview',
+				title: 'Toggle overview (O)',
+				icon: '<i class="fa fa-th"></i>',
+				action: 'Reveal.toggleOverview();'
+				},
+			]
+		},
+		menu: {
+			loadIcons: false
+		}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":1920,"height":1200,"margin":0,"controls":true,"progress":true,"slideNumber":false,"transition":"slide","transitionSpeed":"default"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+
+  <!-- created with Advanced Slides -->
+</html>

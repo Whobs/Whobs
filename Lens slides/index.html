@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Lens slides
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Congenital anomalies
+- Posterior umbilication is fixation artifact in young eyes
+- Lenticonus: capsular thinning nd defeats allow cortex to bulge
+
+<img src="Pasted image 20221002180421.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Anterior lenticonus
+- Posterior lenticonus
+- Lens coloboma
+- Congenital cataracts
+- Alport syndrome
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Anterior lenticonus
+#### Path
+- Alport’s syndrome of hereditary hemorrhagic nephritis, deafness, abnormal type IV collagen (posterior polymorphous dystrophy)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Males
+- Rare
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Bilateral
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Posterior lenticonus
+#### Path
+- Unassociated with systemic disease
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Sporadic
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221002180744.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Posterior bulging of cortex at area of lenticonus
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Lens coloboma
+#### Path
+- Secondary to absence of zonules in ciliary body coloboma (rarely from ciliary body tumor like Embryonal medulloepithelioma)
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Congenital cataracts
+#### Path
+- Follows rules of 3: 1/3 hereditary, 1/3 idiopathic, 1/3 systemic disease
+- Posterior variant from abnormal hyaloid resorption
+- Rubella cataract: dense nuclear cataract, retained nuclei in embryonic nucleus
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221002180931.png" alt="" style="width: 1200px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Zonular cataract: zone of opacified fibers (e.g. neonatal tetany)
+- Anterior pyramidal cataract (congenital anterior subcapsular cataract)
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Alport syndrome
+#### Path
+**X-linked dominant** **Hereditary** defect in **type IV collagen** (basement membrane)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+**Boy** with **Hematuria**, sx of renal failure
+High-frequency **hearing loss**
+- Eye disease (**cataracts**, **lenticonus**)
+- Anterior lenticonus
+
+<img src="Pasted image 20221002180509.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+UA: *hematuria*, *proteinuria*, *red cell casts*, *pyuria*
+
+<img src="Pasted image 20221002180612.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+Lens capsule thinned with dehiscences
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+Renal bx: **split basement membrane** on electron microscopy
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+No therapy to avoid renal failure
+Proteinuria: *ACEi*
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+**Kidney failure**, needing renal transplant
+###### (Can't see, can't pee, can't hear a high C)
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Cataracts
+
+<img src="Pasted image 20221002182344.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221002182708.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Anterior subcapsular cataract
+- Posterior subcapsular cataract (PSC)
+- Cortical cataract
+- Nuclear sclerosis
+- Congenital cataracts
+- Elschnig pearls
+- Zonular cataract
+- Capsular phimosis
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Anterior subcapsular cataract
+#### Path
+- Fibrous plaque synthesized by lens epithelial cells beneath folded anterior lens capsule
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Seen often in lab but not in clinic because tend to be hidden by posterior synechiae or pupillary membrane that cause their formation
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Anterior plaque of collagen
+
+<img src="Pasted image 20221002182815.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221002183025.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221002183044.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221002183055.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Lens epithelial cells within plaque are enclosed by capsule of PAS-positive basement membrane
+- Collagen plaque contracts, causes folds
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Posterior subcapsular cataract (PSC)
+#### Path
+- Migration of lens epithelium from equator to posterior pole, accumulating
+- Bladder or Wedl cell formation (eosinophilia globular cells with nuclei)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Seen more often in younger individuals
+- Steroid users
+- Diabetics
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Most visually significant
+- Graded while visualizing with retroillumination (harder if concurrent dense NS)
+- Similar pathology can be seen after extra-cap CEIOL
+- Bladder or Wedl cells: large round or irregularly oval cells with nucleus (aberrant lens fibers)
+
+<img src="Pasted image 20221002183426.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221013211548.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Graded by vertical height in mm
+
+<img src="Pasted image 20221002183144.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Cortical cataract
+#### Path
+- Degeneration/liquefaction of cortex
+- Vacuoles, water clefts
+- Cortical liquefaction
+- Morgagnian globules (spherules of degenerated lens protein/cytoplasm)
+- Dystrophic calcification in late cases
+- Liquified cataract exerts osmotic effect (intumescent cataract)
+- Lens substance can leak through intact capsule
+- Substance loss leads to shrunken hyper mature cataract with prune-like wrinkled capsule, can incite bland macrophagic response (Phacolytic glaucoma)
+- Cholesterol crystals (Christmas tree cataract)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221002183744.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Total liquefaction = morgagnian cataract
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Lens fiber fragment
+- Ooze degeneratied protein and liquefaction
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Total liquefaction of cortex→ Morgagnian cataract
+- Sclerotic nucleus falls downward, has osmotic effect and makes lens swell
+- Can cause phacomorphic glaucoma
+
+<img src="Pasted image 20221002183850.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221002184041.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221002184050.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Nuclear sclerosis
+#### Path
+
+<img src="Pasted image 20221002184135.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Lens cells sequestered (surface ectoderm) → inevitable in lens growth and development
+- Older, inwardly-sequestered lens fibers degenerate
+- Analogous to desquamating keratin in skin
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Older age
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Increased index of refraction, decreased color vision
+- Lenticular myopia ("Grandma's second sight")
+- Calcium oxalate crystals in nucleus
+- Nucleus yellow-brown color grossly, homogenous
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Increased eosinophilia, loss of artifactitious clefts
+- Urochrome pigment accumulation (blue yellow color defects)
+
+<img src="Pasted image 20221002184549.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221002184621.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221002184652.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221002184712.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Cataract brunescens, cataracta nigra
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Congenital cataracts
+#### Path
+- Follows rules of 3: 1/3 hereditary, 1/3 idiopathic, 1/3 systemic disease
+- Posterior variant from abnormal hyaloid resorption
+- Rubella cataract: dense nuclear cataract, retained nuclei in embryonic nucleus
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221002180931.png" alt="" style="width: 1200px; object-fit: fill">
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Zonular cataract: zone of opacified fibers (e.g. neonatal tetany)
+- Anterior pyramidal cataract (congenital anterior subcapsular cataract)
+
+
+<!-- .slide: class="has-dark-background" data-background-color="darkblue" -->
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Elschnig pearls
+#### Path
+- Wedl cells formed by proliferation of residual lens epithelial cells
+- Post-ECCE
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221002183644.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Posterior capsule is supposed to be less than diameter of rbc
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Treatment would usually be with needle → bladder cell like formations
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Zonular cataract
+#### Path
+- Zonular refers to zone of cataract
+- Cataracta centralis pulverulenta
+- Lamellar cataract
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Attack of in utero tetany → causes opacification zone of lens fibers
+
+<img src="Pasted image 20221002182226.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221002182242.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221002181142.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Capsular phimosis
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221002183512.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Complicated Cataracts (secondary to ocular disease)
+- Fuchs Heterochromic cyclitis
+- Sugar cataracts
+- Chronic uveitis
+- Sarcoidosis
+- Juvenile idiopathic arthritis (JIA) (Juvenile RA, pauciarticular, RF seronegative, ANA+)
+- Myotonic dystrophy
+- Retinitis pigmentosa
+- Tumors (i.e. ciliary body melanoma)
+- Glaucomflecken - focal lens epithelial necrosis with associated cortical damage post acute attack (Acute angle closure glaucoma (ACG))
+- Trauma Soemmerring ring cataract, Electrical cataract, Vossius ring, Chalcosis lentis, Mercurialentis, Argon laser cataract
+- Siderotic cataract
+- Localized endophthalmitis
+- Toxic cataract
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Fuchs Heterochromic cyclitis
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Prior rubella infection?
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Hypochromic heterochromia (involved eye is lighter in 90%, iris darker in inverse/paradoxical heterochromia from severe stroma atrophy)
+
+<img src="Pasted image 20221002185258.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Fine vessels in angle without synechia formation
+- Low grade uveitis with stellate or fusiform chronic precipitates
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Secondary open angle glaucoma in 10-50%
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Sugar cataracts
+#### Path
+- Osmotic cataracts caused by accumulation of sugar alcohols within lens cells
+- Sugar alcohols from aldose reductase when elevated levels of sugar swamp normal glycolytic pathway
+- Diabetes - sorbitol
+- Galactosemia - galactolol (dulcitol)
+- Galactokinase deficiency
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221002185627.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Also tend to develop myopia when sugars are elevated
+
+<img src="Pasted image 20221002185719.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Sarcoidosis
+#### Path
+- Granulomatous disorder that affects the eye most often (38% vs. skin 23%)
+- Discrete noncaseating granulomas
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+African American, young
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+**Nonproductive cough**
+*Lymphadenopathy*
+**Malar Rash** (lupus pernio), *erythema nodosum* (violaceous indurated nodules on shins), *papular sarcoidosis* (papules on face)
+**Hypercalcemia**
+
+<img src="Pasted image 20220927204347.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Slightly elevated and umbilicated papules (may be partially depigmented in blacks,)
+- Uveitis
+- Retinal perivascular candle wax drippings
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221011221105.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20220927204127.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+Dacryoadenitis
+
+<img src="Pasted image 20220927204425.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20220927204519.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Juvenile idiopathic arthritis (JIA)
+#### Path
+- Nonmigratory arthropathy of one or more joints for ≥3 months
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Arthralgia, morning stiffness
+- Fever
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- X-ray shows osteopenia and subchondral sclerosis around involved joints
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- NSAIDs, Methotrexate, Corticosteroids
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Myotonic dystrophy
+#### Path
+- AD dz
+- Chr 19, accumulation of CTG repeats
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Most common form of adult-onset muscular dystrophy
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Myotonia (failure of muscles to relax) - cannot release grip
+- Eventual facial and peripheral muscle weakness (b/l ptosis and flat facial expression)
+- Testicular atrophy, frontal baldness, cataract
+- Features to distinguish from Oculopharyngeal muscular dystrophy (OPMD):
+- "Christmas tree cataracts"
+
+<img src="Pasted image 20221002191955.png" alt="" style="width: 900px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221002192150.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Frontal balding
+- Intellectual impairment
+- Heart block
+- More prominent orbicularis weakness and ocular motility defecits than OPMD
+
+<img src="Pasted image 20220612151746.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Polychromatic anterior and posterior subcapsular cortical crystals (spirally birefringent concentrically multilaminated “rice grains”)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Genetic testing
+- CTG repeat in DMPK gene
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Retinitis pigmentosa
+#### Path
+- Phenotype of progressive photoreceptor degeneration
+- Caused by any of (>3000 mutations) in 150 genes (heterogenous disease)
+- Some genes encode proteins involved in rod phototransduction (i.e. rhodopsin 15-20%, subunits of rod c-GMP phosphodiesterase, c-GMP gated channel)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- 39% sporadic, 20% dominant, 37% recessive, x-linked 4%
+- Consanguinity 30-40%
+- Severity: X-lined > recessive > dominant
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Early: rods more severely affected than cones
+- Night blindness, peripheral field loss, tunnel vision, total blindness
+- Attenuation of retinal vessels, waxy pallor of optic disc, peripheral bone spicule pigmentation
+- Blind by middle age
+
+<img src="Pasted image 20221003190148.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Posterior subcapsular cataract (PSC), Cystoid macular edema (CME), optic disc drusen
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- RPE cells invade retina, surround retinal vessels (bone spicule pigmentation)
+- Intraretinal RPE has large round pigment granules
+- Inner retina well preserved
+
+<img src="Pasted image 20221003190359.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003190512.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221016123233.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221016123214.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003190610.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221003190618.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+- Variants:
+- Leber's congenital amaurosis = congenital blindness of early onset RP
+- Sector retinitis pigmentosa
+- Usher's syndrome = association of RP and hearing loss - 3 types
+- Retinitis pigmentosa with Coats' like response
+- Retinitis punctata albescens
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Soemmerring ring cataract
+#### Path
+- After extracapsular cataract surgery
+- Capsular material persists in equatorial recesses of lens capsular bag
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221002191615.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221002191650.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015183738.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015183753.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Electrical cataract
+#### Path
+- High tension wires → opacification of anterior capsule
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221002191732.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Vossius ring
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Iris pigment on lens capsule
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Chalcosis lentis
+#### Path
+- Copper deposited in basement membrane
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Mercurialentis
+#### Path
+- Mercury deposit in lens capsule (occupational exposure)
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Argon laser cataract
+#### Path
+- Blue light absorbed by yellow sclerotic nucleus
+- Avoid with krypton red
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Siderotic cataract
+#### Path
+- Iron foreign body
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221002191833.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Localized endophthalmitis
+#### Path
+- Propionibacterium acnes
+- Candida parapsiosis
+- Large bacterial or fungal colonies grow within capsular bag post ECCE
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- White plaques
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Delayed chronic granulomatous response
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Toxic cataract
+#### Path
+- Corticosteroids causes posterior subcapsular cataract
+- Occurs in 1/3 with chronic daily dose of 10mg
+- Incidence of 20% if patient receives >15mg prednisolone for 2-8 years
+- Anticholinesterases
+- Anterior subcapsular vacuoles (84%)
+- Naphthalene
+- DNP
+- Triparanol
+- Mercury
+- Phenothiazie
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Cataracts associated with systemic diseases
+- Myotonic dystrophy
+- Wilson disease
+- Diabetes Mellitus Type 2 (DM2) and Diabetes Mellitus Type 1 (DM1)
+- Fabry disease (alpha galactosidase deficiency)
+- Hereditary hyperferritinemia
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Wilson disease
+#### Path
+- Deposit of copper in lens capsule, Descemet’s membrane
+- Similar findings in chalcosis
+- Reported also in Multiple myeloma, lung carcinoma
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Some protein dyscrasias, Copper transport protein deficiency
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Copper in Descemet's membrane
+- Kaiser-Fleischer ring
+
+<img src="Pasted image 20221002162401.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Sunflower cataract
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Fabry disease (alpha galactosidase deficiency)
+#### Path
+- Deficiency of alpha-galactosidase A
+- Sphingolipidosis, storage of ceramide trihexoside
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- X-linked deficiency
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Cornea verticillium in 90% of affected males
+- Posterior spoke-like opacities
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Hereditary hyperferritinemia
+#### Path
+- Crystals of L-ferritin
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Cataracts associated with skin diseases
+- Atopic dermatitis (Eczema) (Andogsky’s syndrome)
+- Ectodermal dysplasias (Rothmund, Werner)
+- Acrodermatitis enteropathica
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Phacolytic glaucoma
+#### Path
+- Advanced cortical liquefaction
+- Leakage of lens material from capsule
+- Eosinophilic high MW lens protein in anterior chamber
+- Macrophages swollen with ingested eosinophilic lens material
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221013212156.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Secondary open angle glaucoma
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Phacoanaphylaxis (Phagoantigenic uveitis)
+#### Path
+- Zonal granuloma (inflammation zones surrounding lens material)
+- Immune complex disease
+- Loss of immune tolerance to lens protein (not cell-mediated rejection)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Rare autoimmune inflammatory response to lens protein
+- Immune complex disease when normal tolerance to lens is lost (lens proteins are also found in other extraocular tissues)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+1. Lens
+2. Antibodies to lens → complement → PMN → epithelioid histiocytes and lymphocytes
+
+<img src="Pasted image 20220927204849.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221011221653.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221013213002.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# True exfoliation of lens capsule
+#### Path
+- Capsular delamination
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Classically secondary to occupational infrared radiation exposure (glass blowers)
+- Aging change
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Split in capsule forms scrolls clinically
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- No association with glauoma
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Pseudoexfoliation syndrome (PEX or PXR)
+#### Path
+- Systemic condition
+- Abnormal mucoprotein (basement-membrane-like material) deposited throughout body (epithelia of lens, iris, and ciliary body)
+- Material adheres to anterior lens capsule → 3 concentric zones of anterior lens
+- Pseudoexfoliative deposits rubbed off anterior lens with pupil activity
+- Immunoreactive with zonular elastic microfibrillar proteins and abnormal zonules leads to increased incidence of IOL and capsular dislocation
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Spontaneous dislocation of lens capsule
+- Ocular manifestation of benign systemic elastic disorder (also fibers in lung, liver)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Diameter of undilated pupil, then area cleaned by iris mechanics, then area where material is peeling off (looks like exfoliation)
+
+<img src="Pasted image 20221002191016.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Sawtooth pattern on iris pigment epithelium
+
+<img src="Pasted image 20220927213737.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Presence of material on ciliary body can increase propensity for spontaneous dislocation
+
+<img src="Pasted image 20221002191347.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221013212819.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Deposits resemble iron fillings on magnet
+
+<img src="Pasted image 20221013212753.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- 2° open angle glaucoma capsulare in 50%
+- Pigment dispersion, "saw-toothing" of iris pigment epithelium, pupil dilates poorly
+- Spontaneous lens dislocation
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Polychromasia capsulare
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221002191513.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221002191503.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Ectopia Lentis
+- Primary and secondary defects in fibrillin (elastic microfibrillar protein)
+- Marfan syndrome
+- Hyperhomocysteinemia (homocystinuria)
+- Ehlers-Danlos Syndrome - single case reported (anterior megalopolis, topiary lentis et papillae, aniridia, buphthalmos)
+- Weill-Marchesani syndrome
+- Dominant spherophakia (McGavic type)
+- Traboulsi syndrome
+- Sulfite oxidase deficiency
+- Isolated ectopia lentis
+- Hyperlysinemia?? - association with ectopic lentis has been doubted
+- Tertiary syphilis
+- Syndermatotic cataract (all from surface ectoderm) - complicated
+- Atopic cataract (Andogsky syndrome)
+- Acrodermatitis enteropathica
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221002192450.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Progeroid syndromes
+- Rothmund's syndrome
+- Werner's syndrome
+- Trauma
+
+<img src="Pasted image 20221002190635.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Marfan syndrome
+#### Path
+- Defect in fibrillin
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Tall, spidery digits
+- Severe axial myopia
+- Retinal detachment
+- Ectopia lentis
+- Dislocates up and out (80%)
+
+<img src="Pasted image 20221002190340.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+Mitral valve prolapse (MVP)
+Aortic dissection
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Hyperhomocysteinemia (homocystinuria)
+#### Path
+- Autosomal recessive cystathionine synthase deficiency
+- → Defect in sulfur containing amino acids
+- → Defect in disulfide bond formation in fibrillin
+- Zonules deficient in cysteine (reduced sulfhydryl crosslinking)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+Vitamin B9 (folate) deficiency
+Vitamin B12 (cobalamin) deficiency
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Lens dislocates down & in or into anterior chamber
+
+<img src="Pasted image 20221002190431.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Platelet abnormality
+- Hypercoagulable
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- PAS positive layer on ciliary body, peripheral RPE degeneration
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Thromboembolic complications under general anesthesia
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Ehlers-Danlos Syndrome
+#### Path
+- Type 3 or 5 collagen defect
+- AD dz
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+Aortic dissection
+- Mitral valve prolapse
+- Aneurysms of circle of Willis (subarachnoid hemorrhage)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Can have rupture of small bowel
+- Perform C-sections early
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Weill-Marchesani syndrome
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- AR or AD dz
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Opposite of Marfan's
+- Short stature
+- Bradydactyly
+- Deafness
+- Inflexible joints
+- Microspherophakia
+- Lenticular myopia
+- Axial lens dislocation
+- Secondary pupillary block glaucoma
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005003353.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Alleviate secondary pupillary block with dilating drops
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Traboulsi syndrome
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Spontaneous filtering blebs
+- Ectopia lentis
+- Facial dysmorphism
+
+<img src="Pasted image 20221002190557.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Sulfite oxidase deficiency
+#### Path
+Most have molybdenum cofactor deficiency
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- AR dz
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Infants with seizures
+- Mental retardation
+- Lens dislocation in 50%
+</div></script></section></section><section  data-markdown><script type="text/template"></script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+
+	if(isLight(bgColor)){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+		  RevealMenu,
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		customcontrols: {
+			controls: [
+				{id: 'toggle-overview',
+				title: 'Toggle overview (O)',
+				icon: '<i class="fa fa-th"></i>',
+				action: 'Reveal.toggleOverview();'
+				},
+			]
+		},
+		menu: {
+			loadIcons: false
+		}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":1920,"height":1200,"margin":0,"controls":true,"progress":true,"slideNumber":false,"transition":"slide","transitionSpeed":"default"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+
+  <!-- created with Advanced Slides -->
+</html>

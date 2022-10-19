@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Optic nerve slides
+
+<img src="Pasted image 20221014231116.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Malignancies
+- Optic nerve glioma (Juvenile pilocytic astrocytoma)
+- Malignant optic nerve glioma
+- Optic nerve meningioma
+- Juxtapapillary melanoma
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Optic nerve glioma (Juvenile pilocytic astrocytoma)
+#### Path
+- Proliferation of benign, spindle-shaped pilocytic astrocytes
+- Grade I astrocytoma
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- 2-6 y/o, 90% before age 20
+- 10-50% have Neurofibromatosis type 1 (NF1, von Recklinghausen disease)
+- Slight female predominance
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Unilateral vision loss
+- Axial proptosis
+- Disk pallor + APD
+- Strabismus
+
+<img src="Pasted image 20221004230050.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Kinked swollen nerve within optic sheath
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Optic canal enlarged
+- Fusiform intradural swelling of nerve but no orbital invasion and dura intact
+- Benign proliferation of spindle-shaped pilocytic astrocytes
+- Rosenthal fibers (clumps of eosinophilic filaments)
+- Subarachnoid proliferation in NF (central ON on MRI)
+
+<img src="Pasted image 20221004230214.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221004230234.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221014231329.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221014231357.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Follow typical lesions
+- Surgery or irradiation for cosmesis or threat of chiasmal involvement
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Malignant optic nerve glioma
+#### Path
+- Like glioblastoma of optic nerve
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Adults
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Rapid blindness
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221004230351.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Rapid death
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Optic nerve meningioma
+#### Path
+- Primary - from optic nerve meninges
+- Secondary - from CNS
+- Ectopic - from ectopic rests
+- Benign tumor of meningothelial cells
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Severe visual loss
+- Minimal proptosis
+- Retinal-choroidal venous collaterals on disk (optociliary shunts)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Imaging: diffuse ON swelling with enlargement at orbital apex
+- Calcification (psammoma bodies)
+- ON tumors meningothelial or transitional
+- Pavingstone clusters or whorls of cells with eosinophilic cytoplasm, vesicular/empty nuclei
+- Intranuclear vaucoles of herniated cytoplasm
+- Psammoma bodies
+- Immunohistochemistry: Express EMA, Vimentin
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221004233156.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221014231450.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221014231511.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- 90% are benign
+- May perforate dura and invade orbital tissues
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Juxtapapillary melanoma
+#### PRESENTATION
+
+<img src="Pasted image 20221004233353.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Enlarged blindspot (from lateral displacement of photoreceptors)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221004233441.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221004233550.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221004233607.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Optic disk pathology
+- Papilledema
+- Optic disk drusen
+- Optic disk atrophy
+- Schnabel's cavernous optic atrophy
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Papilledema
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Always measure blood pressure to ensure it is not from malignant HTN
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Nerve head swollen
+- Narrowing physiologic cup
+- Lateral displacement of peripapillary retina and photoreceptors
+- Buckling (folds) of outer retina (Paton's folds)
+- Shallow peripapillary serous exudate
+- Late: gliosis, optic atrophy, cytoid bodies
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221014234708.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221014234722.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Optic disk drusen
+#### Path
+- No relation to RPE drusen or giant drusen (of Optic nerve glioma (Juvenile pilocytic astrocytoma))
+- Maybe blockage of axoplasmic flow within narrow scleral canal
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Sporadic
+- Famlial (bilateral, irregular, AD dz)
+- 0.3-2% incidence in retinitis pigmentosa
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Calcified, concentrically laminated globular aggregates anterior to lamina cribrosa within scleral ring
+- Calcified mitochondria in prelaminar corpora amylacea may be nidus for further calcification
+
+<img src="Pasted image 20221004233958.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Optic disk atrophy
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Shrinkage of parenchyma, redundant dura, widened subarachnoid space
+- Thickened pial septa, increased glial cells (astrocytes)
+- Loss of axons and myelin sheaths
+
+<img src="Pasted image 20221004234115.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221014234915.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221014234950.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Schnabel's cavernous optic atrophy
+#### Path
+- Pools of hyaluronic acid in retrolaminar areas of nerve
+- Thought to be from gluacomatous pressures pushing vitreous into nerve
+- May actually be in situ synthesis
+- May not see in laboratory, overemphasized on examinations in the past
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Positive stain with mucopolysaccharide stains, sensitive to hyaluronidase digestion
+
+<img src="Pasted image 20221004234208.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221004234450.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Glaucoma
+- "Elevated IOP of sufficient degree or chronicity to produce tissue damage" (1980)
+- "Optic neuropathy associated with excavation of optic disk and progressive loss of visual field sensitivity" (1995)
+- Primary drainage at angle (iris and cornea)
+
+<img src="Pasted image 20221004234832.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221004234915.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221004234942.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221015182246.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221004235113.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Primary congenital glaucoma
+- Developmental glaucoma
+- Primary open angle glaucoma (POAG)
+- Secondary open angle glaucoma
+- Acute angle closure glaucoma (ACG)
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Primary congenital glaucoma
+#### RFX
+- AR dz
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Bilateral
+- Aniridia → photophobia
+- Corneal enlargement → epiphora, blepharospasm
+- Limbal ectasia
+- Buphthalmos (enlarged eye)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Haab's striae - DM rupture horizontal or concentric to limbus peripherally
+- Open angle, high insertion of iris root
+
+<img src="Pasted image 20221004235349.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221004235457.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Developmental glaucoma
+#### Path
+- Iris anomalies: Aniridia, Axenfeld-Rieger Syndrome, Peters' Anomaly
+- Phakomatoses: Neurofibromatosis type 1 (NF1, von Recklinghausen disease), Sturge-Weber syndrome
+- Congenital rubella
+- Lowe syndrome
+- Stickler syndrome (Pierre Robin Anomaly)
+- Hallerman-Streiff syndorme
+- Down syndrome, Trisomy 13 (Patau syndrome), Turner syndrome (rare)
+- Hurler's syndrome
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### Path
+- Chronic, progressive optic neuropathy with thinning of the neruoretinal rim of optic disc
+- Insidious elevated IOP
+- Resistance to outflow is within trabecular meshwork (juxtacanalicular tissue)
+
+<img src="Pasted image 20221005001712.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005001748.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- 2% of individuals over age 40
+- Family history
+- Advanced age
+- African descent (3-4x)
+- Increased IOP
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Asymptomatic until late disease (up to half retinal ganglion cells may be lost before signs of visual field loss on exam)
+- Loss of visual field, gradual decrease in peripheral vision
+- Increased cup to disc ratio
+
+<img src="Pasted image 20220612205144.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Progressive cupping, vertical cupping, asymmetric optic nerve head cupping, notching of the neuroretinal rim, disc hemorrhage
+- Disc hemorrhage and inferior notch on the neuroretinal rim
+
+<img src="Pasted image 20220612211141.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20220612211236.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Gonioscopy: visualize iridocorneal angle
+- Perimetry (evaluate VF). Nasal step often first (inferior nasal loss)
+
+<img src="Pasted image 20220612211559.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Optical coherence tomography (OCT)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Primary: no identifiable underlying cause
+- Secondary:
+- Medication side effect
+- Excess pigmentation within the eye
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### DIAGNOSIS
+- Screening: IOP measurement, assess optic dis and RNFL, visual field testing, but not considered to be cost-effective. Regular eye exams: <40 y/o q10y, 40-54, q4y, 55-64 q3y, 65+ q2y
+- Elevated IOP (risk factor, not part of definition), glaucoma can be present without
+- Increased IOP without optic nerve damage or visual field loss = ocular hypertension
+- May need to check corneal thickness (ultrasonic pachymeter) because thick corneas can cause higher than actual pressures
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Decrease IOP by 20-30%
+- Medications often given in combination
+	- Prostaglandin agonist: most effective initial medication. Increases uveoscleral outflow. Sfx: pigmentation of the iris, thickening of eyelashes, periorbital fat atrophy. Latanoprost, bimpatoprost, travoprost
+	- Cholinergic agonists: Constrict pupil, pulls iris away from angle. Pilocarpine, carbachol
+	- Alpha2 agonists: decrease aqueous humor production and increasing outflow. Sfx: injection and prone to topical allergic responses. Brimonodine
+	- Rho kinase inhibitors: Increases outflow via TM. Netarsudil
+	- Beta-blockers: decrease aqueous humor secretion by the ciliary body. Contraindicated in asthma, COPD, bradycardia, heart block, CHF, and myasthenia gravis
+	- Carbonic anhydrase inhibitors (CAIs): given topically or orally, decreases aqueous humor production by the ciliary body. Sfx: altered taste, diuresis, fatigue, GI upset, kidney stones, paresthesias. Dorzolamide (ggt), brinzolamide (ggt), acetazolamide (oral).
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Various combinations: Combigan (brimonidine + timolol), Cosopt (dorzolamide + timolol), Simbrinza (brinzolamide + brimonidine), Rocklatan (Netarsudil + latanopril)
+- Laser trabeculoplasty
+	- Increases aqueous humor outflow through TM, using argon laser (scarring) or frequency-doubled YAG laser (for selective laser trabeculoplasty, no scarring, can be repeated)
+- Minimally invasive glaucoma surgery (MIGS)
+	- iStent: trabucular micro-bypass stent, with 1mm long titanium stent partially sits inside canal of Schlemm. Has "snorkel" that sits in anterior chamber
+- Surgery (usually when medical and laser therapies are inadequate)
+	- Trabeculotomy - most common, creates fistula between anterior chamber and subconjunctival space. Failure rate of up to 30% after 10 years, but can be minimized by using mitomycin C (antifibrotic) during surgery to prevent scarring of subconjunctival space
+
+<img src="Pasted image 20220612214726.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Aqueous shunts (setons) - tubes inserted into anterior chamber, connected to plate sutured in place on the equatorial portion of the eye to fibrous capsule around the plate
+- Others: canaloplasty, trabectome
+- Cyclodestructive surgery: laser cytophotocoagulation destroys some of ciliary body, can degrade central acuity
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- 2nd most common cause of blindness worldwide, leading cause of irreversible blindness
+Axons in the retinal nerve fiber layer 
+<img src="Pasted image 20220612205040.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Secondary open angle glaucoma
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- Blood or blood-breakdown products
+- Inflammatory cells
+- Lens material (protein or particles)
+- Tumor cells
+- Melanin (pigmentary glaucoma)
+- Pseudoexfoliation syndrome (PEX or PXR)
+- Pigment dispersion syndrome (PDS)
+- Retinal photoreceptor outer segments (Schwartz-Matsuo syndrome)
+- Zonular fragments (historical - enzymatic zonulysis in cataract surgery)
+- Early cellular proliferation
+- Corneoscleral and extraocular disease
+- Chronic luetic (interstitial) keratitis
+- Elevated episcleral venous pressure
+- Venous obstruction (sinus thrombosis, mediastinal syndromes)
+- AV fistula (carotid-cavernous fistulas)
+- Pressure on globe
+- Retrobulbar tumors, tight encircling bands, thyroid orbitopathy
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+
+<img src="Pasted image 20221005010002.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+
+<img src="Pasted image 20221005005920.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005010021.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005010038.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20221005010128.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Acute angle closure glaucoma (ACG)
+#### Path
+- Pupillary block causes entire angle to be blocked suddenly
+- IOP rises rapidly
+- Secondary closed angle glaucoma
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### RFX
+- 10-30% of all glaucoma, 20 million patients worldwide
+- Pupillary dilation in dim light setting in patients with natural lenses
+- Family history
+- Older age, >60
+- Female
+- Hyperopia (shorter eyes)
+- Pseudoexfoliation syndrome (PEX or PXR)
+- Race - Asian and Inuit (similar for chronic angle closure glaucoma)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### PRESENTATION
+- Extremely red and painful eye
+- Pupil sluggish and mid-dilated
+- High IOP
+- Corneal haze, halos around lights
+- May have nausea and vomiting
+
+<img src="Pasted image 20221005001907.png" alt="" style="width: 1000px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### WORKUP
+- Gonioscope
+
+(An open angle)
+<img src="Pasted image 20220612220009.png" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### TREATMENT
+- Kitchen sink approach: triple therapy
+- Topical carbonic anhydrase inhibitor (dorzolamide)
+- Topical beta blocker (timolol)
+- Topical alpha agonist (apraclonidine)
+- If not successful:
+- Hyperosmotic agents (mannitol, glycerin)
+- Morphine for pain, ondansetron for nausea
+- Laser peripheral iridotomy: hole created in iris
+- Anterior chamber paracentesis (extreme IOP elevation), difficult to perform with shallow anterior chamber, short-term for buying time
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="has-dark-background drop" data-background-color="darkblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### COMPLICATIONS
+- Vision loss - a true ophthalmic emergency
+- Peripheral anterior synechiae
+- Clinical stigmata of prior acute attack:
+- Segmental iris atrophy (focal ischemia/necrosis)
+- Dilated, irregular pupil (sphincter and dilator necrosis)
+- Glaucomflecken (focal anterior lens epithelial necrosis)
+- Papilledema from laminar distortion
+</div></script></section></section><section  data-markdown><script type="text/template"></script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+
+	if(isLight(bgColor)){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+		  RevealMenu,
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		customcontrols: {
+			controls: [
+				{id: 'toggle-overview',
+				title: 'Toggle overview (O)',
+				icon: '<i class="fa fa-th"></i>',
+				action: 'Reveal.toggleOverview();'
+				},
+			]
+		},
+		menu: {
+			loadIcons: false
+		}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":1920,"height":1200,"margin":0,"controls":true,"progress":true,"slideNumber":false,"transition":"slide","transitionSpeed":"default"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+
+  <!-- created with Advanced Slides -->
+</html>
