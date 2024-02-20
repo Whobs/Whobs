@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/serif.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Dysphagia
+- n: difficulty swallowing
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Oropharyngeal dysphagia
+- Difficulty initiaiting swallowing
+- Coughing, choking, and nasal regurgitation of fluids
+- Muscular or neurologic disorders, most commonly stroke, Parkinson disease
+- <mark>Evaluation</mark>: **Videofluoroscopy**
+- <mark>Treatment</mark>: dietary, speech therapy
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Esophageal dysphagia 
+- Food sticking or discomfort in the retrosternal region 
+- Mechanical obstruction or a motility disorder
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Classify by food/liquid</mark>:
+	- **Solid** dysphagia suggests **structural** abnormality
+	- **Liquid** dysphagia suggests **motility** abnormality
+	- **Chronic episodic solid** dysphagia suggests **esophageal web** or **distal Schatzki ring** 
+	- **Progressive solid dysphagia** for months suggests **peptic stricture** or **carcinoma**
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" --><mark>Treatment</mark>: depends on underlying cause
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 10%; top: 0%; height: 15%; width: 80%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+ <div class="block">
+
+# Achalasia
+</div>
+
+
+</div>
+
+<div class="" style="position: absolute; left: 3%; top: 20%; height: 70%; width: 64%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+<div class="block">
+
+<img src="Pasted image 20240216181327.png" alt="" style="width: 300px; object-fit: fill">
+
+</div>
+
+
+
+</div>
+
+<div class="" style="position: absolute; left: 30%; top: 20%; height: 71%; width: 66%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+<div class="block">
+
+- Dysphagia for solids and liquids, regurgitation of undigested foods
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Evaluation</mark>:
+	1. Barium esophagraphy: "bird's beak" narrowing of GEJ
+	2. Upper endoscopy to r/o adenocarcinoma (pseudoachalasia) at GEJ
+	3. Esophageal manometry (absence of peristalsis, incomplete relaxation of LES when swallowing)
+	4. Consider **Chagas dz** if recently in South America
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" --><mark>Treatment</mark>: 
+	- Laparoscopic LES myotomy 
+</div>
+
+
+
+</div>
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# GERD
+- Heartburn and/or regurgitation
+	- ± chest pain, cough, hoarseness, wheezing
+	- Alarm sx: anemia, dysphagia, vomiting, weight loss
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Evaluation</mark>:
+	1. **Empiric PPI**
+	2. **EGD** if *refractory to PPI* or *alarm symptoms*
+	3. If EGD normal, 24-hr esophageal pH monitoring or impedance pH testing while taking PPI
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" --><mark>Treatment</mark>:
+	1. PPI qd
+	2. If not responding, PPI bid x4-8 wks
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Barrett esophagus
+- Screen >50yo M with GERD >5yrs and risk factors:
+	- Nocturnal reflux sx, hiatal hernia, elevated BMI, smoker, intra-abdominal fat
+- Don't screen women and surgery doesn't prevent progression to CA
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Evaluation</mark>:
+	1. EGD bx
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" --><mark>Treatment</mark>:
+	1. No dysplasia: **PPI**, f/u in 3-5yrs
+	2. With dysplasia: EGD **ablation** or **mucosal resection**
+	3. If low grade dysplasia without procedure, f/u in 12 mo
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 10%; top: 0%; height: 15%; width: 80%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+ <div class="block">
+
+# Esophagitis 
+</div>
+
+
+</div>
+
+<div class="" style="position: absolute; left: 3%; top: 20%; height: 70%; width: 64%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+<div class="block">
+
+<img src="Pasted image 20240216193150.png" alt="" style="width: 350px; object-fit: fill">
+
+</div>
+
+
+
+</div>
+
+<div class="" style="position: absolute; left: 30%; top: 20%; height: 71%; width: 66%; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start" align="left">
+
+
+<div class="block">
+
+- **Odynophagia**
+- Candida albicans > CMV and HSV
+	- Oral candidiasis (diagnostic) → treat empirically
+	- Viral esophagitis in immunosuppressed and ulcerative oropharyngeal lesions are rare
+- **Pill esophagitis** (tetracyclines, NSAID, KCl, Fe, alendronate), severe substernal CP hours-days after 
+- **Eosinophilic esophagitis** (young adult with severe dysphagia and food impaction) + atopy
+</div>
+
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- <mark>Evaluation</mark>:
+	1. EGD + bx/brushing
+	2. EE: mucosal furrowing, stacked circular rings, white specks, mucosal friability, bx +eos
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Treatment</mark>:
+	1. Esophageal candidiasis → fluconazole or itraconazole
+	2. HSV esophagitis → acyclovir, famciclovir, or valacyclovir
+	3. CMV esophagitis → ganciclovir or valganciclovir
+	4. Pill esophagitis → supportive
+	5. EE → PPI, swallowed fluticasone or budesonide
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Peptic ulcer disease
+- H. pylori or NSAID
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Evaluation</mark>:
+	1. Always test H. pylori (bx, UBT, stool ag, ELISA)
+		- Repeat outpt if neg
+		- False neg if abx or bismuth 28d, PPI 2wks
+	2. EGD (duodenal ulcers don't need bx)
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" --><mark>Treatment</mark>:
+	- PPI qd
+	- Stop ASA/NSAID 
+		- Restart 2º prev. ASA 1-7d after starting PPI indefinitely
+		- COX-2i + PPI if need NSAID
+	- Treat H. pylori 
+		- Clarithromycin-based triple therapy
+		- If recent macrolide, local resistance ≥15%, or eradication rates <85%, use bismuth quadruple therapy
+		- F/u H. pylori testing 4 wks after finishing tx (UBT, stool, gastric bx). No f/u EGD if uncomplicated
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+Complications: 
+- Penetration: gradual worsening abdominal pain, commonly + acute pancreatitis
+- Perforation: severe, sudden, abdominal pain + shock + peritoneal signs
+- Outlet obstruction: nausea, vomiting, early satiety, succession splash
+- Bleeding
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Nonulcer dyspepsia
+- Nonspecific upper abdominal pain or nausea not from PUD or GERD
+- Requires one or more:
+	- Bothersome postprandial fullness
+	- Early satiety
+	- Epigastric burning
+- Drugs that can contribute: NSAIDs, abx, bisphosphonates, K supplements
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- <mark>Evaluation</mark>:
+	1. EGD if >60yo, or younger + risk for malignancy (alarm features or from Asia/Russia/South America)
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Treatment</mark>:
+	1. Discontinue medication if possible
+	2. Test and treat H. pylori
+	3. Empiric PPI for 4-6 wks
+	4. EGD if refractory
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Gastroparesis
+- Delayed gatric emptying, recurrent nausea, early satiety, bloating, weight loss
+- Causes:
+	- Systemic sclerosis
+	- DM
+	- Hypothyroidism
+	- Anticholinergics
+	- Opioids
+	- Viral infection (rapid onset gastroparesis)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- <mark>Evaluation</mark>:
+	1. **EGD** to r/o pyloric channel obstruction from PUD
+	2. Gastric scintigraphy, wireless motility capsule, or gastric emptying carbon breath testing
+		- Done with *blood glucose <275* (hyperglycemia → acutely impairs gastric emptying)
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Treatment</mark>:
+	1. Small low-fat meals 4-5x/d
+	2. Acute gastroparesis: IV erythromycin
+	3. Chronic gastroparesis: metoclopramide (stop if EPS)
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Complications of gastric surgery
+
+- **Early dumping syndrome** within *30 min of eating*
+	- Hypotension, palpitations, diaphoresis
+	- Nausea, abdominal bloating, cramping, diarrhea
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->**Late dumping syndrome** *1-3 hrs after meals*
+	- Reactive hypoglycemia
+	- Decreased concentration, faitness, altered consciousness
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Acute pancreatitis
+- Requires two of: 
+	- Acute upper abdominal pain
+	- Amylase or lipase ≥3x ULN 
+	- Imaging
+- Causes: 
+	- Gallstone and alcohol
+	- ERCP
+	- Sulfonamides, estrogens, didanosine, valproate, thiazides, 6-MP/azathioprines, pentamidine, lasix
+	- Hypertriglyceridemia (>1000 mg/dL)
+	- Hypercalcemia
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- <mark>Evaluation</mark>:
+	1. Abdominal u/s to r/u biliary obstruction
+	2. CT abdomen if severe, lasting >48 hrs, or complications (e.g. pseudocyst) suspected
+	- Elevated hematocrit and BUN or SIRS+ predicts poor outcome
+	- Consider abscess, pseudocyst, or necrotizing pancreatitis if +rebound, absent bowel sounds, +fever, or +melena
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Treatment</mark>:
+	1. IV fluids (250-500ml/h for 12-24 hrs)
+	2. Pain control
+	3. Oral feeding when n/v and abdominal pain resolve
+	4. Jejunal feedings within 72 hrs if oral feeding not tolerated
+	- Abx if cholangitis, infected pancreatic necrosis, and infected pseudocysts
+	- Cholecystectomy before d/c for uncomplicated gallstone pancreatitis
+	- ERCP within 24 hrs if ascending cholangitis or biliary obstruction
+	- Surgery for pancreatic necrosis
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Chronic pancreatitis
+- History of abdominal pain, recurrent pancreatitis, weight loss (**AUD** is common)
+- **Pancreatic calcifications** on imaging
+- **Exocrine/endocrine** pancreatic insufficiency (steatorrhea, osteoporosis, DM)
+- Amylase/lipase may be normal
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Evaluation</mark>:
+	1. **CT abdomen** pancreas-protocol for calcifications
+	2. If no calcifications, *MRI/MRCP/EUS* to evaluate main/branch pancreatic ducts
+	3. *Sweat chloride* if young adult
+	4. Workup *autoimmune* or *cancer* if older pt w/o risk factors
+	- Pancreatic biopsy and ERCP are not indicated
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" --><mark>Treatment</mark>:
+	1. Stepwise pain control (avoid opioids)
+	2. Pancreatic enzymes ± antidiarrheal agents
+	3. DM treatment
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Autoimmune pancreatitis
+- Diagnosis:
+	- Narrowed main pancreatic duct or parenchymal swelling ("sausage-shaped" pancreas)
+	- Response to glucocorticoids
+- Type 1 AIP: older M, +IgG4-dz (Sjogren, PSC, biliary strictures, autoimmune thyroiditis, retroperitoneal fibrosis, sclerosing sialoadenitis, interstitial nephritis)
+- Type 2 AIP: chronic pancreatitis and IBD
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Evaluation</mark>:
+	1. Exclude pancreatic cancer, consider biopsy
+	2. Increased serum IgG4 in Type 1 AIP
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" --><mark>Treatment</mark>:
+	1. Glucocorticoids, retreat if relapse
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Acute Diarrhea
+- <mark>Evaluation</mark>:
+	1. **No testing** if healthy, watery diarrhea <3d
+	2. If >1 wk, **stool testing** for bacteria, toxins, and **C. diff**
+	3. **Hospitalize** if mucoid/bloody (dysentery), fever, sepsis, or immunocompromised
+		- **Stool testing** to guide antimicrobial use
+	- *Yersinia enterocolitica* colitis can mimic *appendicitis/Crohn disease*
+	- *Cryptosporidiosis* often in *AIDS*, but can be *immunocompetent* (swiming pools, self-limited secretory diarrhea)
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Treatment</mark>:
+	1. Supportive, oral hydration
+		- **Antidiarrheal** if no fever/blood (risk HUS in EHEC, toxic megacolon in C. diff)
+	2. Dysentery with temperature >101F → **empiric azithromycin** after testing
+	3. Travel-associated → **empiric azithromycin**
+	4. Parasites (Giardia, Entamoeba) → **metronidazole**, tinidazole, or nitazoxanide
+	- NO abx for EHEC
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Chronic diarrhea
+- Duration >4 weeks
+- Uncommon in immunocompetent except Giardia
+- Osmotic: lactose, only when eating and not nocturnal
+- Secretory: large-volume, watery, nocturnal bowel movements, unchanged by fasting
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- <mark>Evaluation</mark>:
+	1. Colonoscopy + bx to assess for microscopic colitis
+	2. Assess pretest probability
+		- Blood or elevated fecal calprotectin → IBD
+		- Laxative screen
+		- Reduced fecal elastase → chronic pancreatitis
+		- +72hr stool collection for fecal fat → steatorrhea
+			- Celiac, SIBO, short bowel, pancreatic insufficiency
+	3. Stool electrolytes (Na, K) in liquid stool → fecal osmotic gap to dx osmotic diarrhea
+		- Osmotic gap: 290 - (2 x (Na + K))
+			- Osm gap >100 → osmotic diarrhea
+			- Osm gap <50 → secretory diarrhea
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- <mark>Patterns</mark>:
+	- **Bloating**, discomfort **relieved by bowel movement**, no alarm features
+		- IBS or celiac dz- test for celiac disease
+	- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Diarrhea in **45-60yo F**, **nocturnal**, normal colonoscopy
+		- Microscopic colitis- stop NSAIDs/PPI, bx to confirm
+	- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Dairy
+		- Lactose intolerance- diet or hydrogen breath test
+	- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->Artificial sweetener or fructose
+		- Carbohydrate intolerance- diet or hydrogen breath test
+	- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->Nocturnal, DM, or SSc
+		- SIBO- hydrogen breath test or empiric antibiotic trial 
+	- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->Pulm dz and/or recurrent Giardia
+		- CVID or selective IgA deficiency- Ig levels, consider CF
+	- &shy;<!-- .element: class="fragment" data-fragment-index="6" -->Somatization/psychiatric, history of laxative use
+		- Self-induced diarrhea- stool osm, lytes, Mg, laxative screen
+	- &shy;<!-- .element: class="fragment" data-fragment-index="7" -->Severe secretory diarrhea and flushing
+		- Carcinoid syndrome- 24h urinary 5-HIAA
+	- &shy;<!-- .element: class="fragment" data-fragment-index="8" -->Diarrhea, pain, bleeding, +fecal calprotectin
+		- IBD
+	- &shy;<!-- .element: class="fragment" data-fragment-index="9" -->Medications: PPI, Mg, metformin, colchicine, abx
+	- &shy;<!-- .element: class="fragment" data-fragment-index="10" -->Young children or contaminated lakes/streams
+		- Giardia
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Microscopic colitis
+- 45-60yo F, ± **autoimmune** condition especially Celiac
+- Chronic diarrhea, mild abdominal pain and weight loss
+	- not increased risk for colon cancer
+- <mark>Evaluation</mark>:
+	1. Colonoscopy (looks normal) + **bx**
+- <mark>Treatment</mark>:
+	1. Stop NSAID, SSRI, PPI
+	2. Symptom management: loperamide/pepto/budesonide
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Celiac disease
+- **Gluten** (wheat, rye, barley) with genetic predisposition
+- Associations: **T1DM**, **autoimmune thyroid dz**, **microscopic colitis**, **small bowel lymphoma**
+- Presentation:
+	- Chronic diarrhea or steatorrhea
+	- Bloating, weight loss, abdominal pain
+	- **Dermatitis herpetiformis**
+	- Transaminitis
+	- IDA, fat-soluble vitamin deficiency, osteoporosis
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- <mark>Evaluation</mark>:
+	1. **IgA anti-tTG** Ab assay 
+		- May be neg if IgA deficient. Use IgG or IgG-deamidated gliadin
+	2. If positive, **small bowel biopsy**
+	3. **Bone mineral density** testing for all new Celiac dx
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Treatment</mark>:
+	1. **Gluten-free** diet
+	2. Can **remeasure** IgA anti-tTG titer or repeat small bowel bx
+	3. If recurrent and compliant with diet, evaluate for microscopic colitis and intestinal lymphoma
+	4. **Dapsone** can hasten dermatitis herpetiformis resolution (check G6PD)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20240217205848.png" alt="" style="object-fit: scale-down">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# IBD (Crohn, UC)
+
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Crohn disease
+	- Linear/stellate/serpiginous **ulcerations**
+	- **Skip** areas of inflammation within the **entire GI** tract
+	- **Granulomas** characteristic but uncommon, **transmural involvement**
+	- **Abdominal pain**, diarrhea, inflammatory mass, fever, weight loss, **strictures/fistulas**
+	- **Smoking** is a risk factor
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Ulcerative colitis
+	- **Friable, granular ulceration** with **bleeding**
+	- Mucosal edema, erythema, loss of vascular pattern
+	- Short, blanched crypts, and **crypt abscesses**
+	- **Diarrhea**, **tenesmus**, urgency hematochezia, weight loss, fever
+	- **Smoking alleviates** symptoms
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- <mark>Evaluation</mark>:
+	1. **Colonoscopy** + **bx**
+	2. **Stool testing** for Shigella, Salmonella, Campylobacter, EHEC, O&P, C. diff toxin especially if acute sx
+	3. Consider *fecal calprotectin* for IBD (elevated) vs. IBS
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Note</mark>:
+	- Don't do barium enema for moderate/severe UC (risk toxic megacolon)
+	- Consider enterovesical fistula if CD and cystitis
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- <mark>Treatment</mark>:
+	1. Flu and pneumococcal vaccines ideally before tx
+	- **Remission**: Budesonide, steroids
+	- **Remission and maintenance**: sulfasalazine, 5-ASAs, biologics, tofacitinib
+	- **Maintenance, glucocorticoid-sparing**: Aza/6-MP/MTX
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+**Crohn disease treatment**
+|             | Mild          | Moderate         | Severe           |
+| ----------- | ------------- | ---------------- | ---------------- |
+| Colitis     | Sulfasalazine |  |  |
+| Ileocolonic | Budesonide    | Budesonide       |                  |
+| Steroid            |               |   po & IV steroids               |  po & IV steroids                |
+| Biologic    |               | Biologic         | Biologic         |
+| Metabolite  |               | Aza/6-MP/MTX     |                  |
+- Biologics (remission and maintenance): infliximab, adalimumab, certolizumab, vedolizumab, natalizumab, ustekinumab
+	- Check TB, HBV, HCV first
+- R/o thiopurine methyltransferase deficiency before starting Aza/6-MP (→ increased Aza/6-MP)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+**Ulcerative colitis treatment**
+|                        | Mild       | Moderate               | Severe          |
+| ---------------------- | ---------- | ---------------------- | --------------- |
+| po & topical 5-ASA     | 5-ASA      | 5-ASA                  |                 |
+| Multimatrix budesonide | Budesonide | Budesonide |  |
+| Steroid                | pr Steroid | po Steroid             | po & IV steroid                |
+| Biologics              |            | Biologic               | Biologic        |
+| Tofacitinib            |            | Tofacitinib            | Tofacitinib     |
+| Metabolite             |            | Aza/6-MP               |                 |
+- Biologics: infliximab, adalimumab, golimumab, vedolizumab, ustekinumab
+	- Check TB, HBV, HCV first
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+**Follow-up surveillance**
+- Starts 8 yrs after dx of ulcerative pancolitis or Crohn disease of most of the colon
+	- Surveillance colonoscopy for colon cancer q1-2yr
+	- If dysplasia → proctocolectomy
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20240217215326.png" alt="" style="object-fit: scale-down">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Chronic constipation
+- ≥3 months of symptoms
+- Secondary constipation commonly from meds (opioids)
+- Colonoscopy if alarm features (colon cancer) or ≥50yo and no previous colo
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- <mark>Stepwise treatment</mark>:
+	1. **Eliminate** implicated medications if possible
+	2. **↑physical activity**, **↑fiber**
+	3. +**soluble** fiber (psyllium, methylcellulose)
+	4. +**surfactants** (docusate sodium/calcium for very mild, intermittent constipation)
+	5. +**osmotic** laxative (Mg, lactulose, sorbitol, PEG)
+	6. +**stimulant** laxative (anthraquinone, senna, diphenylmethanes)
+	7. If refractory to above, **prosecretory agent** (*lubiprostone*, *linaclotide*)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20240217232013.png" alt="" style="object-fit: scale-down">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# IBS
+- Diagnosis:
+	- Recurrent abdominal pain ≥1d/wk for ≥3 mo
+	- Two of the following:
+		- Defecation-related pain
+		- Change in stool frequency
+		- Change in stool consistency
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Subtypes based on predominant sx:
+	- IBS-C
+	- IBS-D
+	- IBS-M
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Routine labs/imaging and colo are **unnecessary** if no alarm sx
+	- Colonoscopy if severe/refractory sx
+- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->**General treatment**:
+	1.  **Avoid** gluten (even if celiac neg), dairy, fermentable oligosaccharides, disaccharides, monosaccharides, and polyols (FODMAPs)
+	2. *Diclomine* and *peppermint oil* for pain and global sx
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+**IBS-C**
+- <mark>Treatment</mark>:
+	1. PEG
+	2. If refractory to PEG: lubiprostone, linaclotide, plecanatide
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+**IBS-D**
+- <mark>Evaluation</mark>:
+	1. Test for celiac dz and giardiasis
+	2. Fecal calprotectin to r/o IBD
+- <mark>Treatment</mark>:
+	1. Loperamide
+	2. Tricyclic antidepressants
+	3. If refractory: rifaximin, eluxadoline, alosetron (alosetron risks ischemic colitis)
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Diverticular disease
+- **Diverticulitis**: microperforation of a diverticulum + inflammation → LLQ pain ± fever
+- **Diverticular bleeding**: rupture of artery that penetrated a diverticulum, usually painless and stops without intervention
+- *Colovescial fistula* can present as pneumaturia/fecaluria or recurrent polymicrobial UTI
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Evaluation</mark>:
+	1. **Imaging** studies are **usually unnecessary**
+	2. If suspect *abscess* (severe pain, high fever, palpable mass) → **CT**
+	3. **Avoid colonoscopy** during acute diverticulitis (air insufflation risks perf)
+		- Colonoscopy after recovery to r/o colon cancer
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" --><mark>Treatment</mark>:
+	1. Stable → **liquid diet**, po abx x7-10d (**cipro**/**flagyl**)
+	2. If unable to tolerate po → **hospitalize**, IV fluids, abx
+	3. **Abscesses**: abx for small, CT-guided drainage for larger abscess
+	4. *Surgery* if tx fails or acute abdomen
+	5. **High fiber diet**
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Mesenteric ischemia and ischemic colitis
+- Causes:
+	- Cardiogenic emboli, thrombosis
+	- Low flow states (hypotension, vasoactive drugs)
+- Acute mesenteric ischemia presents with leukocytosis, hemoconcentration, AGMA, and increased LDH/amylase
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Acute mesenteric ischemia
+- Poorly localized, severe abdominal pain, **out of proportion to physical findings**
+- Peritoneal signs signify infarction
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Evaluation</mark>:
+	1. **CTA** or selective angiography
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" --><mark>Treatment</mark>:
+	1. **Broad-spectrum abx**
+	2. **Embolectomy** or intra-arterial thrombolysis
+	3. **Resection** of necrotic bowel
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Chronic mesenteric ischemia
+- **Postprandial abdominal pain**, fear of eating, weight loss
+- **Atherosclerosis** in other vascular beds
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Evaluation</mark>:
+	1. CTA, selective angiography
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" --><mark>Treatment</mark>:
+	1. Angioplasty with stenting or surgical bypass
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Colonic ischemia
+- LLQ abdominal pain + self-limited bloody diarrhea
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Evaluation</mark>:
+	1. Abdominal CT
+<img src="Pasted image 20240218145411.png" alt="" style="object-fit: scale-down">
+
+	2. Colonoscopy with bx if possible
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" --><mark>Treatment</mark>:
+	1. Supportive, IV fluids and bowel rest
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Abnormal LFTs
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- **Hepatocellular** (↑ AST and ALT)
+	- ALT >5000 usually **APAP** tox or hepatic **ischemia**
+	- ALT>AST, >1000, T. bili >15 → **viral** or **drug** hepatitis
+	- AST/ALT >2 suggests **EtOH hepatitis**
+	- ↑ PT/INR and ↓ albumin = **severe hepatocellular dysfunction**
+	- Minimally ↑ ALT/AST in pt with obesity, HLD, and HTN suggests **MASLD** (NALFD)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- **Cholestatic** (↑ bili and ALP, proportionally less transaminitis)
+	- **Indirect** hyperbilirubinemia (>80% indirect)
+		- Overproduction (hemolysis)
+		- Impaired uptake (Gilbert syndrome = normal aminotransferase levels and no hemolysis)
+	- **Direct** hyperbilirubinemia (>20% direct)
+		- Hepatocyte dysfunction
+		- Impaired bile flow
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Hepatitis A
+- Fecal-oral
+- Abrupt onset fatigue, anorexia, malaise, n/v, jaundice
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Vaccine for prophylaxis</mark>:
+	- Travelers to endemic areas
+	- IVDU, HIV infection, homeless
+	- MSM
+	- Chronic liver dz
+	- Persons working in settings of exposure
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" --><mark>Evaluation</mark>:
+	1. Transaminitis >1000
+	2. If unexplained acute hepatitis or liver failure, test for IgM anti-HAV
+- &shy;<!-- .element: class="fragment" data-fragment-index="3" --><mark>Treatment</mark>:
+	1. HAV vaccine within 2 weeks of exposure
+	2. If >40yo, also HAV IgG
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Hepatitis B
+- Acute symptoms similar to Hep A or subclinical
+- Hep B serology:
+|                         | HBsAg | anti-HBs | anti-HBc   | HBeAg | anti-HBe | HBV DNA                       | ALT   |
+| ----------------------- | ----- | -------- | ---------- | ----- | -------- | ----------------------------- | ----- |
+| Immunized               | -     | <mark>+</mark>    | -          | -     | -        | -                             | -     |
+| Resolved                | -     | <mark>+</mark>        | <mark>+(IgG)</mark> | -     | ±        | -                             | -     |
+| Acute                   | <mark>+</mark> | -        | <mark>+IgM</mark>   | ±     | -        | +                             | <mark>↑</mark> |
+| Chronic immune tolerant | +     | -        | +(IgG)     | +     | -        | <mark>>1mil</mark>                         | -/↑   |
+| Chronic immune active   | +     | -        | +(IgG)     | +     | -        | >2k HBeAg(-) or >20k HBeAg(+) | ↑     |
+| Chronic inactive        | +     | -        | +(IgG)     | -     | <mark>+</mark>        | <mark><2k</mark>                           | -      |
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- <mark>Treatment indications</mark>:
+	1. Acute liver failure or cirrhosis
+	2. Chronic immune-active
+	3. Reactivation
+	4. Immunosuppressed
+- Entecavir or tenofovir (emtricitabine-tenofovir if coinfected with HIV)
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Follow-up screening for HCC</mark>:
+	- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Presence of cirrhosis
+	- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->Asian men >40yo and Asian women >50yo
+	- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->Sub-saharan Africa >20yo
+	- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->Family history of HCC
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Hepatitis C
+- Acute infection is **asymptomatic**
+- <mark>Screening</mark>:
+	- 18-79yo screened at least once
+	- IVDU, HIV or STI
+	- Blood transfusions before 1992
+- Test for HCV in:
+	- Non-Hodgkin lymphoma
+	- Membranoproliferative glomerulonephritis
+	- Mixed cryoglobulinemia
+	- Porphyria cutanea tarda
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- <mark>Evaluation</mark>:
+	1. anti-HCV **Ab**
+	2. If positive, HCV **RNA** (to determine presence of active infection)
+	3. **HCV genotyping**
+	- *LFTs may be normal* in 40% of pts with chronic HCV
+	- Reactivation of Hep B can occur (**test for hep B** before starting HCV tx)
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Treatment</mark>:
+	1. **Combination** direct-acting antiviral drugs based on *genotype*, *previous treatment*, and *fibrosis* status
+	2. **Liver transplant** if decompensated or localized HCC
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20240218161439.png" alt="" style="object-fit: scale-down">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Autoimmune hepatitis
+- **20-40yo F**
+- Asymptomatic transaminitis to acute liver failure
+- 50% have other **autoimmune dz** (thyroiditis, UC, or synovitis)
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Evaluation</mark>:
+	1. Serology
+		- Elevated **IgG** (high protein, low albumin)
+		- (+) **ANA** and **anti-smooth muscle antibody** titers
+		- (+) **p-ANCA** or **anti-LKM I** antibody
+	2. **Liver biopsy** establishes the dx
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" --><mark>Treatment</mark>:
+	1. If active inflammation on bx or symptomatic
+		- **Steroids** and **azathioprine**
+	- Relpase occurs after stopping
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Alcoholic hepatitis
+- Binges → steatosis → steatohepatitis (inflammation)
+- *Mild steatohepatitis*: common, asx, mildly ↑ aminotransferase levels
+- *Severe steatohepatitis* (**alcoholic hepatitis**): symptomatic
+	- Jaundice, leukocytosis, tender hepatomegaly, ±fever
+	- Portal hypertension
+	- AST and ALT levels <300-500, AST/ALT ratio >2
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Treatment</mark>:
+	1. EtOH **abstinence**
+	2. **Prednisone** if any:
+		1. Maddrey Discriminant Function (MDF) score ≥32
+		2. MELD score >20
+		3. Encephalopathy
+		- **Contraindicated** if *GIB, infection, pancreatitis, kidney dz*
+		- Discontinue prednisone if bilirubin (or Lille score) doesn't improve by **day 7**
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# MASLD (NAFLD)
+- Metabolic dysfunction associated steatotic liver disease
+- Insulin resistance, obesity, HLD, T2DM
+- **Most common** cause of abnormal liver test results
+- 20% have **NASH** (steatohepatitis **+ fibrosis**)
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Evaluation</mark>:
+	1. Presumptive dx:
+		- Metabolic dysfunction
+		- Mildly elevated aminotransferase levels
+		- Hyperechoic on U/S or low-density parenchyma on CT
+	2. Diagnosis
+		- **Transient elastography** to assess for hepatic fibrosis
+		- **Liver biopsy** when dx in doubt
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" --><mark>Treatment</mark>:
+	1. Control DM, HLD, obesity
+	2. No drugs approved for primary treatment. Statin if transaminitis
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Primary biliary cholangitis
+- 40-60yo F
+- Chronic progressive **autoimmune** cholestatic liver disease
+- **Pruritis**, fatigue, **weight loss**, **hyperpigmentation**, portal HTN
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Evaluation</mark>:
+	1. Laboratory (sufficient if both):
+		- **ALP** >1.5x ULN
+		- (+) **anti-mitochondrial** Ab titer. If neg, (+) **sp100** or **gp210** 
+	2. **Liver biopsy** if (-) Ab, but strong suspicion
+	3. **Elastography** for fibrosis staging
+		- HCC screening for: 
+			- Men with PBC 
+			- Anyone with PBC + cirrhosis
+	1. Fat-soluble vitamin deficiencies (osteoporosis) → **DEXA q2y**
+	2. Associated with autoimmune thyroid dz→ **TSH qyr**
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" --><mark>Treatment</mark>:
+	1. Ursodeoxycholic acid
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Primary Sclerosing Cholangitis
+- Chronic cholestatic liver dz of unknown cause
+- Progressive bile duct destruction and biliary cirrhosis
+- 85% have **IBD** (often UC)
+- Elevated **bilirubin**
+	- **Pruritis** or jaundice
+	- Elevated **ALP** > AST/ALT elevation
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Evaluation</mark>:
+	1. **MRCP**: string of beads pattern
+	2. Risk cholangiocarcinoma, gallbladder carcinoma, and colon cancer (if IBD)
+		- **Colonoscopy q1-2y** starting at time of diagnosis (regardless of age, duration, or IBD)
+		- **Annual MRCP** and **CA 19-9** 
+		- If *cirrhosis*, **HCC screening with u/s q6mo**
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" --><mark>Treatment</mark>:
+	1. Liver transplantation is only effective treatment
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Pasted image 20240219135300.png" alt="" style="object-fit: scale-down">
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Cirrhosis
+- Decompensated cirrhosis if any of:
+	- Hepatic encephalopathy
+	- Variceal hemorrhage
+	- Ascites
+		- Spontaneous bacterial peritonitis
+	- Hepatorenal syndrome
+	- Jaundice
+	- HCC
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Portal hypertension
+- Prehepatic
+	- Portal vein thrombosis
+- Intrahepatic
+	- Cirrhosis
+- Posthepatic
+	- Budd-Chiari syndrome
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Cirrhosis syndromes
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Hepatic encephaloapthy</mark>
+	- Mild cognitive changes to coma
+	- **Ammona level** helps dx
+	- Triggers: infection, volume depletion, GIB, sedating meds
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" --><mark>Portopulmonary HTN</mark>
+	- Pulm HTN and portal HTN
+	- Should get **TTE**, RVSP >50 → further evaluation
+	- Consider liver transplantation
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- <mark>Hepatopulmonary syndrome</mark>
+	- Dyspnea, hypoxemia, increased A-a
+	- **Platypnea** (worse sitting up, better lying down)
+	- Confirm with **TTE with contrast**
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Hepatorenal syndrome type 1</mark>
+	- Cr ↑ 0.3 or >50% from baseline within 48 hrs, **bland UA, normal u/s**
+	- **Low urine Na**, **low FENa**, **oliguria**
+	- **No improvement in kidney function** after withdrawing diuretics and 2d of volume expansion with IV albumin
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" --><mark>Hepatorenal syndrome type 2</mark>
+	- Less severe, more gradual decline in kidney function
+	- Associated with **diuretic-refractory ascites**
+- &shy;<!-- .element: class="fragment" data-fragment-index="3" --><mark>Hepatic osteodystrophy</mark>
+	- Osteoporosis/osteopenia/osteomalacia in liver dz
+	- Evaluation: Ca, P, Vit D, DEXA (before liver txp)
+	- Treatment: **Vit D repletion**, **bisphosphonate (use IV if varices)**
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# New diagnosis of cirrhosis
+- <mark>Evaluation</mark>:
+	1. EGD to evaluate for varices
+	2. U/s for ascites → paracentesis
+		- SAAG for cause
+| Ascitic fluid protein (low protein? ) | SAAG (High = portal HTN)             | Etiology         |
+| --------------------- | ----------------- | ---------------- |
+| <2.5 g/dL             | ≥1.1              | Cirrhosis        |
+| <2.5 g/dL             | <1.1              | Nephrotic        |
+| ≥2.5 g/dL             | ≥1.1              | RHF, Budd-Chiari |
+| ≥2.5 g/dL             | <1.1              | Malignancy, TB   |
+		- Granulocyte count (>250) and culture if any mental status change or suspect SBP
+	3. U/s for HCC q6mo
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- <mark>Treatment</mark>:
+	- Vaccination for HAV/HBV, and other routine vaccinations
+	- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Variceal bleeding 
+		- Prophylaxis: **propranolol/nadolol/coreg** (first line)
+			- EGD band ligation (if can't take β-blocker)
+		- Active: **octreotide**, **EGD band ligation**, ppx **cipro/CTX x7d** (even if no ascites)
+		- Transfusion goal hgb 7
+	- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Ascites (step-wise)
+		- Stop ACEi, ARB, and NSAIDs
+		- **Low-sodium diet**
+		- **Spironolactone ± furosemide**
+		- Serial large-volume paracentesis (+ albumin if >5L), TIPS, or liver transplantation
+	- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->SBP (granulocyte count >250)
+		- PPX: **fluoroquinolones** chronically if **h/o SBP** OR **ascitic protein <1.5** AND *Na <130*, *Cr ≥1.2*, *BUN ≥25*, *T.bili ≥3*, or *hospitalized* 
+		- Treat: **Cefotaxime** ± *albumin* infusion if kidney dysfunction or T.bili >4
+	- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->Hepatic encephalopathy: Correct precipitating factor, lactulose ± rifaximin
+		- PPX: **lactulose titrated to 3 stools** per day
+	- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->Hepatic osteodystrophy: Ca, Vit D, IV bisphosphonate
+	- &shy;<!-- .element: class="fragment" data-fragment-index="6" -->Hepatorenal syndrome
+		1. **Stop diuretics**
+		2. Volume expansion with **IV albumin** ± midodrine and octreotide or levophed 
+		3. **Dialysis bridge** to **liver transplantation**
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Acute liver injury/failure
+- **Injury**: acute increase in aminotransferase levels
+- **Failure**: injury + encephalopathy/coagulopathy
+- Causes:
+	1. **APAP** toxicity (most common)
+	2. Idiosyncratic drug reactions
+		- Abx (**augmentin**), and antiepileptics (**phenytoin**, **valproate**)
+	3. **HBV** infection
+	4. Others: HAV, hepatic ischemia, herpes, mushroom poisoning, Wilson dz
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- **Patterns**:
+	- Acute 20x ↑ AST and ALT → **APAP** (>4g, or less + EtOH)
+		- Measure APAP, use **nonogram** → consider **N-acetylcysteine**
+	- Outbreak of liver failure with foods (raspberries, scallions) → **HAV**
+	- Acute ↑ **AST to >1000** while hospitalized → **acute liver hypoperfusion**
+	- Acute ↑ enzymes and hemolysis in young pt, **Kayser-Fleischer rings**, **psych/athetoid movements** → **Wilson dz** 
+		- Measure serum Cu and ceruloplasmin, urine Cu excretion
+	- **Herpes** (simplex/zoster) infection, **AST and ALT >5000** in **immunocompromised**/pregnant, usually **+encephalitis**, ±rash
+		- Treat with acyclovir
+
+<img src="Pasted image 20240219151137.png" alt="" style="object-fit: scale-down">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- <mark>Treatment</mark>:
+	1. Immediately contact liver transplantation center
+	2. N-acetylcysteine for confirmed or suspected APAP poisoning
+	3. Lactulose for encephalopathy (with head CT to r/o cerebral edema or ICH)
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Liver disease in pregnancy
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Hyperemesis gravidum
+	- 1st trimester **severe vomiting**. ↑ ALT, nl T.bili
+	- Hydration, *pyridoxine*, antiemetics
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Intrahepatic cholestasis of pregnancy
+	- 2nd/3rd trimester **intense pruritis**. ↑ ALT, ↑ serum bile acids, ↑ ALP. Nl-↑ T.bili
+	- **Ursodeoxycholic acid**
+- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->Preeclampsia → *ultimately delivery*
+	- 3rd trimester **HTN, edema, proteinuria**. Mildly ↑ ALT, nl T.bili
+- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->HELLP syndrome → *ultimately delivery*
+	- 3rd trimester *preeclampsia, abdominal pain, nausea*, **microangiopathic hemolysis**. Hemolysis, ↑ ALT, *thrombocytopenia*, nl T.bili
+- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->AFLP  → *ultimately delivery*
+	- 3rd trimester *preeclampsia, abdominal pain, nausea*, **encephalopathy**. Hemolysis, ↑ ALT, *thrombocytopenia*, **hypoglycemia, ↑ INR**, usually nl T.bili
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Gallstone pathology
+- Biliary colic: episodic acute, severe, epigastric/RUQ pain x30min + n/v
+- Dilation of the cystic or biliary duct indicates obstructing stone
+- Fever, leukocytosis, transaminitis → acute cholecystitis or CBD obstruction
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- <mark>Patterns for differentials</mark>:
+	- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Acute cholecystitis
+		- Epigastric/RUQ pain, fever, bilirubin <4, mildly ↑ transaminase, leukocytosis  
+		- RUQ u/s shows thickened gallbladder wall + pericholecystic fluid
+	- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Biliary crystals (sludge)
+		- Biliary colic or pancreatitis without gallstones or bile duct dilation on imaging
+	- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->Acute cholangitis
+		- RUQ pain, fever, jaundice, ±fever, ±mental status changes
+		- Bilirubin >4, AST and ALT >1000
+	- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->Acute acalculous cholecystitis
+		- **Critically ill**, febrile, or septic patient
+		- No gallstones on sonogram, but otherwise c/w acute cholecystitis
+	- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->Fitz-Hugh-Curtis syndrome (gonococcal/chlamydial perihepatitis)
+		- RUQ pain, **pelvic adnexal tenderness**, leukocytosis, **cervical smear showing gonococci**
+	- &shy;<!-- .element: class="fragment" data-fragment-index="6" -->Mirizzi syndrome
+		- Impacted gallstone in cystic duct causing **extrinsic compression of common hepatic duct**, jaundice
+	- &shy;<!-- .element: class="fragment" data-fragment-index="7" -->Cholecystoenteric fistula (gallstone ileus)
+		- Biliary colic or cholecystitis + **SBO** and **pneumobilia**
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- <mark>Treatment</mark>:
+	- **Biliary colic** → **elective cholecystectomy** if gallstones on imaging
+	- **Acute cholecytitis** → *Augmentin/unasyn* or *cephalosporin + metronidazole*, surgery before hospital discharge
+	- **Acute cholangitis** → *Abx* as with acute cholecystitis, **ERCP** removal of CBD stones
+	- Surgery not indicated for asymptomatic gallstones
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# UGIB
+- Major causes: PUD, varices, MWT
+- Hematemesis, melena, rarely BRBPR
+- Do not order barium x-ray (interferes with studies)
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" --><mark>Patterns</mark>: 
+	- **PUD** (dyspepsia, H. pylori infection, NSAID, AC, severe illness)
+	- **Gastroduodenal erosions** (NSAID, EtOH, medical illness) usually small volume or occult
+	- **Variceal** (chronic liver dz, portal HTN, EtOH or viral hepatitis)
+	- **MWT** (heavy EtOH, prior retching → hematemesis, bulimia, after weightlifting)
+	- **Aortoenteric fistula** (recent aortic graft surgery)
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# UGIB management
+- Risk stratification: Glasgow-Blatchford score ranges 0-23. 0 = 100% NPV for severe GIB
+	- Guides admission vs. discharge, and EGD
+- Pre-EGD:
+	- 2 large-caliber IV
+		- **IVF** targeting HR <100, SBP >100, no orthostasis
+		- **Blood transfusion** for hemodynamic instability or hgb 7
+	- **PPI** (stopped if EGD r/o ulcer)
+	- **Reverse anticoagulation**: Vit K, 4f-PCC, idarucizumab, andexanet alfa
+		- Stop *ASA* for 1º prevention, continue when possible for 2º
+		- *DAPT* - discuss with cardiologist if recent ACS/stent. Continue ASA alone if P2Y12i must be stopped
+	- Octreotide and abx if suspect variceal
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+**EGD evaluation and management**
+- EGD within **24 hrs**
+	- Within **12 hrs** for suspected *variceal* bleed or *rapid* bleeding
+- **Low-risk** ulcers: *clean base* or *nonprotuberant pigmented spot*
+	- Oral PPI, begin food, early hospital discharge (12-24hrs)
+- **High-risk** ulcer: active arterial spurting or nonbleeding visible vessel
+	- EGD hemoclips, thermal therapy, or injection
+	- Continuous IV PPI infusion x72 hrs
+- Repeat EGD for repeat or continued bleeding
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+**Post-EGD care**
+- Test for **H. pylori**, retest if negative
+- **Long-term PPI qd** if need for ASA and other antiplatelet, NSAID, AC, or steroid
+	- *Not H2-blocker*
+- If variceal hemorrhage, 2º ppx with **nonselective β-blocker** & **endoscopic band ligation**
+- **Restart ASA ASAP** if held for pts with recent ACS/stent
+- **Restart P2Y12i within 5 days** if held for UGIB
+- No NGT
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# LGIB
+- Acute, painless LGIB in older adult is usually diverticular or angiodysplasia
+- <mark>Patterns</mark>:
+	- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->**Diverticular** bleeding (most common)
+		- Painless, self-limiting, massive hematochezia 
+	- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Colonic **tumor**/**polyp**/angiodysplasia
+		- Chronic blood loss or acute painless hematochezia
+	- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->**Heyde** syndrome (angiodysplasia)
+		- Aortic stenosis 
+	- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->**Postpolypectomy** bleeding
+		- Recent colonic polypectomy 
+	- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->Colonic **ischemia**
+		- Vascular dz in older pt, LLQ abdominal pain
+	- &shy;<!-- .element: class="fragment" data-fragment-index="6" -->**IBD**
+		- Bloody diarrhea, tenesmus, abdominal pain, fever 
+	- &shy;<!-- .element: class="fragment" data-fragment-index="7" -->**Aortoenteric fisula** (→UGIB)
+		- Aortic aneurysm repair 
+	- &shy;<!-- .element: class="fragment" data-fragment-index="8" -->**Meckel diverticulum**
+		- Young pt with painless hematochezia, normal EGD and colo
+	- &shy;<!-- .element: class="fragment" data-fragment-index="9" -->**Hereditary hemorrhagic telangiectasia**
+		- Mucocutaneous telangiectasias
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+**Treatment**
+- Hemodynamically unstable → resuscitation
+	- CTA
+	- Catheter-based embolization if CTA positive
+	- EGD if CTA negative (10% of rapid rectal bleeding are UGIB)
+- Transfusion and anticoagulation/antiplatelet management same as UGIB
+- Colonoscopy within 24 hrs of admission for hemodynamically stable patients without rapid bleeding
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 720px; width: 1280px; min-height: 720px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Small bowel bleeding
+- Between ampulla of Vater and ileocecal valve
+- Overt or occult (10% of all GIB)
+- <mark>Evaluation</mark>:
+	1. Repeat EGD/colo especially if initially low quality (diagnostic in 25%)
+	2. Further evaluation if above are negative:
+		- Unstable → CTA
+		- Stable → capsule endoscopy
+			- No capsule endoscopy if obstruction or stricture (severe Crohn dz)
+</div></script></section></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+	var isLight = isLight(bgColor);
+
+	if(isLight){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+		  RevealMenu,
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		mermaid: {
+			theme: isLight ? 'default' : 'dark',
+		},
+
+		customcontrols: {
+			controls: [
+				{id: 'toggle-overview',
+				title: 'Toggle overview (O)',
+				icon: '<i class="fa fa-th"></i>',
+				action: 'Reveal.toggleOverview();'
+				},
+			]
+		},
+		menu: {
+			loadIcons: false
+		}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":1280,"height":720,"margin":0.04,"controls":true,"progress":true,"slideNumber":false,"transition":"slide","transitionSpeed":"slow"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+
+  <!-- created with Advanced Slides -->
+</html>
